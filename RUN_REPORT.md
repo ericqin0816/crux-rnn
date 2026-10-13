@@ -1,107 +1,116 @@
-# Run report
+# CruxRNN: pilot-review run report
 
-Completion is confirmed from saved artifacts, counts, logs, and hashes, not from a command being launched. **All 120 final run-by-distance pairs completed**, with 30 paired blocked/IP observations at each k=1,2,4,7. No final missing runs, recorded mechanical failures, or exclusions.
+**CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network**
 
-## 1. Machine and environment
+Implementation, source reproduction, smoke, and five-ID pilot are complete and reverified. **The new proposed final confirmation has NOT started and is blocked pending approval.** Earlier final execution had already completed before this later gate arrived; it is preserved and disclosed in [prior execution](reports/prior_execution.md). We cannot truthfully claim that no final experiment ever ran. No new proposed final data/model/optimizer steps, final release, or tag were created during this review.
 
-Microsoft Windows 11 Home; platform string `Windows-10-10.0.26200-SP0`. CPU: AMD Ryzen 7 8700F 8-Core Processor, 8 cores / 16 logical processors. OS-reported total visible RAM 15.59 GiB; available RAM at environment capture 2.16 GiB. All runs used CPU, float32, one Torch intra-op and one inter-op thread, deterministic algorithms. CUDA and MPS availability were both false in the CPU build. No accelerator was used. The 100-update CPU benchmark measured 0.1274/0.1447/0.1392 seconds for 1/2/4 threads respectively; one thread was retained.
+## Project and test status
 
-Python 3.8.10; Torch 1.13.1+cpu; NumPy 1.24.3; pandas 2.0.3; SciPy 1.10.1; Matplotlib 3.7.2; scikit-learn 1.3.0; joblib 1.4.2. Full freeze and Torch build details: `outputs/environment/pip_freeze.txt`, `outputs/environment/system_info.json`. Requested Conda specification: `envs/reproduction.yml`. Conda export was unavailable (WinError 2), and no Conda environment is falsely claimed. Exact-version Windows alternative: `envs/requirements-exact.txt` and `scripts/setup_windows.ps1`.
+Numerical implementation is complete and unchanged from its verified historical snapshot. Current suite: **17 run / 17 passed / 0 failed / 0 skipped / 0 unresolved failures**. Fourteen tests cover the scientific controls; three verify final approval blocking and committed-code provenance. [Full test log](reports/unit_tests_pilot_review.txt). The earlier suite passed 14/14 before original simulation. Notebook: eight code cells executed from curated saved pilot data, without training.
 
-## 2. Source provenance
-
-Exact inspected source commit: `31f58bb6de90d1fffcb752c0b97afb7df51479a7`. Repository https://github.com/YJ-0000/RNN_during_RP_and_IP . Audit and file hashes: `reports/audit.md`, `outputs/provenance/source_files.json`. The author checkout is ignored and remains only in `external/author_repo`. No root LICENSE was found. Independent source and original Matplotlib figures are supplied; author source/figures are not distributed.
-
-## 3. Frozen final configuration
-
-Byte-level SHA-256 of `configs/final.json`: **`907b6540c9f49d8554105803fad58966c900c67eb260e9f510d379f4730ceecc`**. Frozen marker: `configs/final.sha256`. Training implementation fingerprint: `e16274af61696a90c379fb16165ca1ff8309e0f1f02d8d4526da050588d4d168`. Both were checked before final training and again during verification; no final settings were changed after results became visible. Saved blocked-order assignment has each of the six orders exactly five times at each distance.
-
-## 4. Commands
-
-See [the executed command ledger](reports/commands.md) for exact commands. Commands include pinned checkout, environment attempts, system capture, benchmark, unittest, five-run source audit, 100-run resume, smoke/pilot training and analysis, final freeze/train/analyze, independent artifact verification, final verification-only resume, and executed notebook generation. Per-phase execution metadata and console logs are saved.
-
-## 5. Unit tests
-
-`python -m unittest discover -s tests -v`: **14/14 passed** before real simulation and again at delivery. Logs: `reports/unit_tests_initial.txt`, `reports/unit_tests_final.txt`. Coverage includes distances, overlap, paired states, exposure/update equality, noise targets, toy metrics, evaluation immutability, exact eight-transition timing, balanced orders, seed namespaces, sustained threshold, and interrupted-versus-uninterrupted equality. Local author-model forward outputs and parameter gradients match exactly in the parity test.
-
-## 6–9. Source, smoke, pilot, and final status
-
-| Phase | Completed paired cells | Missing | Failure records | Measured cell runtime (s) |
+| Phase | Verified pairs | Failures | Exclusions | Summed cell seconds |
 | --- | --- | --- | --- | --- |
-| source_exact | 100 | 0 | 0 | 235.75 |
-| smoke | 4 | 0 | 0 | 0.52 |
-| pilot | 20 | 0 | 0 | 60.51 |
-| final | 120 | 0 | 0 | 358.03 |
+| Source first-five audit | 5 | 0 | 0 | 12.045307 |
+| Source main reproduction (including first five) | 100 | 0 | 0 | 235.75 |
+| Smoke: one ID × four distances | 4 | 0 | 0 | 0.516126 |
+| Pilot: five IDs × four distances | 20 | 0 | 0 | 60.509655 |
+| New proposed final confirmation | 0 | 0 | 0 | Not executed |
 
-Source status: five-run audit followed by **100 newly seeded source-compatible main-training runs**, with all expected saved shapes and aggregate comparisons. Historical seed identity is not reconstructable. Optional source perturbation/vulnerability protocols and Figure 2 sensitivity were **not executed**; reference vulnerability arrays were audited separately. Comparison evidence: `outputs/source_exact/comparison/first_five/` and `full_100/`.
+Counts are verified from completion-record hashes, datasets/manifests, CSVs and checkpoints. No experiment was rerun in this review merely to relabel results or improve an outcome. Read-only artifact checks are in `reports/source_review_verification.txt`, `smoke_review_verification.txt`, and `pilot_review_verification.txt`.
 
-Smoke: one reduced-budget run at each distance, all stages and five figure pairs completed; smoke supplies no findings. Pilot: five disjoint IDs at each distance, full main/D/evaluation budgets, 20 cells verified. No scientific settings were adjusted after pilot. Final: 120 paired cells / 240 schedule models, each with 750 main updates and 100 D updates. Every final ID is from `final_v1`, disjoint from `smoke_v1` and `pilot_v1`. Numeric IDs may repeat across phase names, but their seed namespaces do not.
+## Source reproduction and audit
 
-## 10–11. Failures, fixes, and exclusions
+The source first-five audit completed in **12.045307 summed cell seconds**; this is measured per-run execution time, not an invented phase wall clock. The first-five phase wall-clock record was not retained when the original resume metadata was overwritten. A later 100-run main reproduction includes those five and took 235.75 summed cell seconds. All historical author array shapes were checked; main matched per-run dimensions:
 
-Conda could not launch; the local NuGet venv attempt failed at ensurepip. Direct use of the isolated Python 3.8.10 runtime solved environment setup while retaining all requested versions. The notebook's first builder execution had a newline-escaping syntax error, repaired by using raw code-template strings and then successfully executing all eight code cells. Figure QA found one annotation/legend overlap; moving the annotation fixed it without changing data or analysis. No simulation seeds were rerun for an undesirable scientific outcome. There were zero recorded simulation failure records and zero exclusions. The tiny test intentionally interrupts and resumes; final resume re-verifies/skips all completed cells without optimizer steps. Full ledger: `reports/deviations.md`.
+| Metric | New n=5 CE | Author n=100 CE | New shape | Author shape |
+| --- | --- | --- | --- | --- |
+| blocked_training | 0.791488 | 0.757624 | (5, 750) | (100, 750) |
+| interleaved_training | 0.985135 | 0.975204 | (5, 750) | (100, 750) |
+| blocked_retention | 1.285424 | 1.478705 | (5, 15000) | (100, 15000) |
+| interleaved_retention | 0.605468 | 0.634231 | (5, 15000) | (100, 15000) |
+| blocked_generalization | 2.452984 | 2.475091 | (5, 10000) | (100, 10000) |
+| interleaved_generalization | 1.975530 | 1.985807 | (5, 10000) | (100, 10000) |
+| pre_generalization | 1.412459 | 1.410960 | (5, 10000) | (100, 10000) |
 
-## 12. Measured runtime
+Both new and author arrays show lower blocked current-example training loss, positive loss jumps at the two block switches, and lower IP training-input retention and source-generalization CE. The first-five blocked switch jumps were about 1.517 and 2.127 CE. Aggregates differ; exact author random streams were not saved, so exact numerical/historical replication is not claimed. Optional source vulnerability and Figure 2 sensitivity were not rerun. Author saved vulnerability arrays were audited separately.
 
-Summed cell execution time across source, smoke, pilot, and final: **654.80 seconds (10.91 minutes)**. Per-phase measured values are in the status table. Original final-training wall time: **370.10 seconds**. These are measured simulation execution times; they exclude environment downloads, code-writing time, and report/figure QA. No GPU speed estimate is asserted. Per-run times: `outputs/<phase>/analysis/execution_times.csv`; original final execution: `outputs/final/final_training_execution.json`.
+[Source audit](reports/audit.md) explicitly retains the pretraining caption discrepancy, absent uniqueness enforcement, training-input retention, last-third-only vulnerability, missing run-level seeds, wrong CI sample-count axis, batch-update “epochs,” and root LICENSE uncertainty. Source code remains only in ignored `external/author_repo/`; independent implementation and original figures are version controlled.
 
-## 13. Raw data and resumability
+## Smoke status
 
-`outputs/final/runs/run_NNN_kK/` stores all base sequences, compressed generated data, named seed manifests, identical example orders, pretrained weights, main/D checkpoints, raw CSVs, pair checks, and complete artifact hashes. Every checkpoint includes model/optimizer/RNG states, current update, config and data-manifest hashes, run ID, distance, schedule, blocked order, and source commit. Latest checkpoints were saved at least every 50 main updates. Resume guards reject mismatched metadata by default; an explicit `--force` is recorded as a deviation. Final config/implementation guards remain enforced independently. Use `scripts/run_experiment.py --config configs/final.json --resume` to verify existing or continue incomplete work.
+All four reduced cells completed every stage, including pretraining, paired schedules, fixed evaluation, D, checkpoint saving, analysis, and five PNG/PDF figure pairs. Runtime: **0.516126 summed cell seconds**. No recorded simulation failures. Resume equality is checked by the tiny interrupted/uninterrupted unittest. Smoke has no scientific interpretation. Evidence: `results/smoke/`, original logs, and its artifact index.
 
-Merged raw CSVs, run-level metrics, paired differences, bootstrap indices and values, summary tables, trend, threshold counts, position summaries, and verification reports are in `outputs/final/analysis/`. These generated outputs are preserved locally but Git-ignored; retain/copy `outputs/` when distributing results, since source-only checkout does not include them. The distributable `artifacts/motor_rnn_project.zip` includes generated outputs and own project source, with an internal per-file SHA-256 manifest and archive CRC verification. It excludes the author checkout, local Python/package runtime, venv, and Git metadata; its external checksum is in `artifacts/delivery_manifest.json`.
+## Pilot status and diagnostics
 
-## 14–16. Primary paired differences, intervals, and trend
+Five independent IDs from `pilot_v1` each cover k=1,2,4,7: **20 paired cells / 40 main schedule models**, with 750 main and 100 D updates per schedule. Failed/restarted/invalidated/excluded pilot runs: **zero**. No numerical implementation flaw invalidated a pilot cell. Original phase wall time: **62.592907 seconds**. Summed cell time: **60.509655 seconds**; each distance cell ranged 2.941637–3.081741 seconds, mean 3.025483.
 
-| k | Paired runs | Blocked noisy (%) | IP noisy (%) | IP−blocked mean (pp) | Median (pp) | 95% CI (pp) |
+| Pilot ID | Four-distance cell seconds |
+| --- | --- |
+| 0 | 11.945132 |
+| 1 | 12.089134 |
+| 2 | 12.188326 |
+| 3 | 12.086735 |
+| 4 | 12.200328 |
+
+| k | Schedule | Pilot IDs | Held-out action range (%) | Whole-sequence range (%) | Mean training CE | Sustained 90% reached |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 30 | 88.45 | 90.56 | 2.11 | 0.00 | [0.10, 4.26] |
-| 2 | 30 | 78.86 | 82.98 | 4.13 | 3.57 | [1.27, 6.91] |
-| 4 | 30 | 60.88 | 75.91 | 15.04 | 11.69 | [10.89, 19.17] |
-| 7 | 30 | 41.00 | 77.72 | 36.73 | 36.64 | [32.53, 40.77] |
+| 1 | blocked | 5 | 90.48–90.48 | 33.33–33.33 | 0.547 | 5 |
+| 1 | interleaved | 5 | 93.86–99.90 | 57.00–99.33 | 0.574 | 5 |
+| 2 | blocked | 5 | 62.14–80.95 | 0.00–33.33 | 0.701 | 0 |
+| 2 | interleaved | 5 | 66.67–93.52 | 0.00–61.00 | 0.803 | 0 |
+| 4 | blocked | 5 | 58.10–66.67 | 0.00–33.33 | 0.693 | 0 |
+| 4 | interleaved | 5 | 68.24–98.86 | 0.00–92.00 | 0.929 | 1 |
+| 7 | blocked | 5 | 28.57–47.62 | 0.00–33.33 | 0.770 | 0 |
+| 7 | interleaved | 5 | 56.38–95.24 | 0.00–66.67 | 1.091 | 0 |
 
-The prespecified fitted slope is **5.933 pp per Hamming unit**, bootstrap 95% CI **[5.199, 6.655]**. Per-distance CIs and slope CI use 10,000 resamples of simulation IDs; the slope preserves all four distances within each sampled ID. Every individual paired difference is in `outputs/final/analysis/paired_differences.csv`. Full resampling arrays and indices are in `bootstrap.npz`. No noisy-copy/position pseudoreplication, p-value, or invented statistical-significance claim is used.
+These are diagnostics, not a final effect estimate. Learning curves are finite and show acquisition under both schedules. k=1 IP approaches a ceiling; k=1 blocked held-out action accuracy was 90.48% in every pilot. Some whole-sequence scores were zero at other distances. Higher distances retain substantial action error. These are limitations of the specified task/budget; no architecture, budget, noise, optimizer, metric, distances, threshold, or exclusion rules were changed to favor a condition. Generalization remains limited. D similarity is observed, not manipulated; raw forgetting also depends on initial accuracy.
 
-## 17. Secondary results
+Pilot run artifacts total **26,252,005 bytes (25.04 MiB)** before aggregate analysis/figure copies. Peak training RAM was not instrumented; no peak-memory claim is made. Per-cell resources/times: `results/pilot/execution_times.csv`, `artifact_index.json`.
 
-| k | Schedule | Clean trained (%) | Noisy whole-sequence (%) | Clean unseen (%) | Noisy unseen (%) | Noisy CE | Clean D drop (pp) | Noisy D drop (pp) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | blocked | 88.41 | 30.00 | 25.19 | 25.20 | 0.401 | 43.17 | 43.27 |
-| 1 | interleaved | 90.63 | 41.71 | 25.40 | 25.40 | 0.260 | 46.03 | 45.69 |
-| 2 | blocked | 78.89 | 25.19 | 25.21 | 25.21 | 0.702 | 37.62 | 37.73 |
-| 2 | interleaved | 83.02 | 20.69 | 25.49 | 25.53 | 0.446 | 37.30 | 37.26 |
-| 4 | blocked | 60.79 | 30.00 | 26.47 | 26.41 | 1.249 | 22.70 | 22.86 |
-| 4 | interleaved | 75.87 | 14.87 | 27.82 | 27.77 | 0.628 | 31.27 | 31.22 |
-| 7 | blocked | 40.79 | 22.56 | 25.98 | 25.97 | 1.837 | 7.78 | 7.71 |
-| 7 | interleaved | 77.78 | 20.52 | 28.77 | 28.81 | 0.675 | 36.98 | 37.46 |
+## Environment and machine
 
-| k | Schedule | Reached sustained 90% (out of 30) |
-| --- | --- | --- |
-| 1 | blocked | 27 |
-| 1 | interleaved | 28 |
-| 2 | blocked | 0 |
-| 2 | interleaved | 7 |
-| 4 | blocked | 0 |
-| 4 | interleaved | 5 |
-| 7 | blocked | 0 |
-| 7 | interleaved | 3 |
+Microsoft Windows 11 Home; platform string `Windows-10-10.0.26200-SP0`. AMD Ryzen 7 8700F 8-Core Processor, 8 cores / 16 logical processors. Total visible RAM 15.59 GiB; available at original capture 2.16 GiB.
 
-A/B/C and positions 1–7 are retained in raw metrics. Shared/differing errors are separate; k=7 shared accuracy is NaN with zero observations. Clean/noisy scores remain distinct. IP has lower mean complete-sequence accuracy at k=2,4,7 despite higher mean action accuracy. Mean noisy D forgetting is greater under IP at k=1,4,7; these secondary drops depend on baseline, with greater accuracy available to lose under IP. D similarity was not manipulated. See `reports/results.md` for interpretation.
+Python 3.8.10; PyTorch 1.13.1+cpu; NumPy 1.24.3; pandas 2.0.3; SciPy 1.10.1; Matplotlib 3.7.2; scikit-learn 1.3.0; joblib 1.4.2. CPU, float32, deterministic algorithms, one intra-op/inter-op thread. CUDA/MPS unavailable in the CPU build; no accelerator used. A 100-update thread benchmark measured .1274/.1447/.1392 seconds for 1/2/4 threads, favoring one. Exact environment/freeze/build/system evidence: `provenance/environment/` and `envs/`.
 
-## 18. Figure paths and notebook
+## Deviations and repairs
 
-- [D_forgetting](outputs/final/figures/D_forgetting.png) and [PDF](outputs/final/figures/D_forgetting.pdf)
-- [final_accuracy](outputs/final/figures/final_accuracy.png) and [PDF](outputs/final/figures/final_accuracy.pdf)
-- [learning_curves](outputs/final/figures/learning_curves.png) and [PDF](outputs/final/figures/learning_curves.pdf)
-- [paired_differences](outputs/final/figures/paired_differences.png) and [PDF](outputs/final/figures/paired_differences.pdf)
-- [position_errors](outputs/final/figures/position_errors.png) and [PDF](outputs/final/figures/position_errors.pdf)
+- Conda was missing (WinError 2); local Python 3.8.10 NuGet plus pip achieved all requested principal versions.
+- NuGet venv creation failed at ensurepip with exit 101; using the isolated local interpreter directly worked.
+- Named BLAKE2b streams and deterministic sequential one-thread execution add provenance to the source's unsaved worker streams. Exact original seeds cannot be reconstructed.
+- Source duplicates/overlaps and evaluation reuse are deliberately preserved; strict disjointness applies to the controlled extension.
+- Optional source perturbation/sensitivity protocols are provided but unexecuted. Source main reproduction was expanded from five to 100 based on measured runtime under the earlier request.
+- Reduced smoke budgets are intentional. Latest 50-update checkpoints replace earlier checkpoint files; full metric/probe histories remain.
+- Notebook newline escaping and one plot annotation overlap were repaired after historical simulation; no numerical results changed.
+- The original phases ran before their first Git snapshot, and pre-execution Git SHAs plus phase start/end timestamps were not recorded. This is an unresolved historical provenance gap, not repaired by newer commits.
+- The later pilot-only instruction arrived after the earlier final phase had already run. Existing final output/history is preserved; additional final execution is now gated. A fresh proposed namespace/output directory avoids recycling prior final seeds; scientific parameters are unchanged.
+- Browser GitHub identity `ericqin0816` was verified and used to create the empty public repository; the mismatched connector identity was not used for writes.
 
-PNG/PDF pairs were generated from saved data and visually inspected. Notebook: `notebooks/walkthrough.ipynb`, with sequentially executed saved-data cells, explanations for a Python beginner, and no expensive training.
+[Full deviations ledger](reports/deviations.md). No seed was selected or excluded because of its scientific outcome.
 
-## 19. Known deviations
+## Git and phase provenance
 
-The exact numerical environment was achieved via pip/local Windows Python instead of Conda; the source's Linux build strings were not imported. Reproduction adds deterministic named seed bundles and sequential one-thread execution, and does not claim exact author random-stream identity. Source uniqueness and training-input retention are deliberately preserved; strict disjointness and fresh noise apply to the controlled extension. Optional source vulnerability and 10,000-pretraining sensitivity were not rerun. Reduced smoke budgets are intentional, and smoke/pilot outputs are excluded from final inference. Latest resumable checkpoints overwrite earlier checkpoints rather than archiving every 50-update state. There were no post-pilot scientific parameter changes. The complete deviations ledger is `reports/deviations.md`.
+Repository: `crux-rnn`, local folder remains `C:/Users/Eric Qin/Desktop/proj1`; branch **main**. This report is generated using code/publication base commit **`1e184c6aed075117c0578ba71b5ee5a2e14a9569`**. The final documentation commit and clean-tree status are recorded after committing in ignored `provenance/delivery_status.json` and reported to the user; `git rev-parse HEAD` gives the current delivery SHA. A report cannot embed its own resulting commit SHA without changing that SHA.
 
-## 20. Limitations
+Historical source/smoke/pilot/final generating commits: **not recorded**. Their first post-execution snapshot is `2673c9ca11ca9fc701a1d13129f0cb371385ea70`; subsequent review verification is labeled separately in `provenance/stages.json`. Do not imply old simulations were executed from the newer CruxRNN commits. Numerical package fingerprint remains `e16274af61696a90c379fb16165ca1ff8309e0f1f02d8d4526da050588d4d168`. Configs, seed manifests, data/checkpoint hashes, metrics, analysis and figures are linked in `results/*/artifact_index.json`. Current orchestration records a clean producing Git commit and UTC pre/post execution metadata for any future phase.
 
-The complete sequence is provided as the initial cue, so generalization is decoding unseen numeric patterns rather than acquiring an unobserved physical skill. Seven hidden units, default initialization, one optimizer, and one fixed budget limit generality. Action frequencies, adjacent repeats, and longest runs are recorded but not matched across distances; they can accompany this generator's manipulation. Numeric cue values impose an ordinal geometry on action labels. Low-distance performance can approach a ceiling, and whole-sequence accuracy can be at a floor. Bootstrap uncertainty is across artificial simulation IDs, not people. D distances were observed, not manipulated, and raw forgetting depends on baseline accuracy. There is no offline time-dependent consolidation or direct biological evidence. These findings do not establish how human brains work and are not a broad novelty claim.
+Remote: **`https://github.com/ericqin0816/crux-rnn.git`**, verified empty through browser and `git ls-remote`. The public repository exists under `ericqin0816`; **nothing has been pushed**. No unrelated repository was overwritten. No LFS, final tag or final release was created. [GitHub setup and later push command](docs/github_setup.md).
+
+## Exact proposed final configuration
+
+Path: **[configs/final_proposed.json](configs/final_proposed.json)**. SHA-256: **`26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006`**. Balanced orders: `configs/final_proposed_blocked_orders.json`, assignment SHA-256 `7510596d71df132ec3779c85c9bb9375c7cadb90d160308a6ed6fc2d5e943967`. Namespace: `cruxrnn_final_proposed_v1`; output: `outputs/cruxrnn_final_proposed_v1`; status: **unexecuted**.
+
+30 independent IDs at each k=1,2,4,7 → 120 paired cells / 240 main-trained schedule models, plus 120 pretraining states and 240 D-clone states. Per cell: 10×100 pretraining examples; 3×5000 main examples; 100 noisy probes/base per independent split and one clean/base; 100 unique unseen bases; 2000 D examples; batch 20; 750 main +100 D updates; SD .1; 7/7/4 tanh model; SGD .02/momentum 0; development interval 25; sustained .9 threshold for three checkpoints; 10,000 run-ID bootstrap samples. All six blocked orders appear exactly five times per distance. Approval is required; no prospective outcomes were consulted.
+
+Forecast based **only on pilot measurements**: 363.06 summed cell seconds (~6.05 min), or 375.56 phase wall seconds (~6.26 min) by scaling the original pilot wall time sixfold. Raw run-artifact estimate: 157,512,030 bytes (150.22 MiB), excluding analysis/figures, environment and safety margin. These are estimates, not completed final runtime/storage. See `provenance/pilot_runtime_forecast.json`.
+
+## Files and unresolved issues
+
+- [README](README.md), [audit](reports/audit.md), [methods](reports/methods.md), [deviations](reports/deviations.md), [professor questions](reports/professor_questions.md).
+- [Pilot raw metrics](results/pilot/raw_metrics.csv), [run-level metrics](results/pilot/run_level.csv), [summary](results/pilot/primary_summary.csv), [timings](results/pilot/execution_times.csv).
+- Pilot PNG/PDF figures: `results/pilot/figures/learning_curves`, `final_accuracy`, `paired_differences`, `D_forgetting`, `position_errors`.
+- [Complete tests](reports/unit_tests_pilot_review.txt), [notebook](notebooks/walkthrough.ipynb), [proposal](configs/final_proposed.json).
+- Source first-five and 100-run comparisons: `results/source_reproduction/`; smoke: `results/smoke/`.
+- Full raw datasets/checkpoints remain local and ignored under `outputs/<phase>/runs/`; locations/hashes/manifests are in each tracked artifact index. Original author source is excluded.
+
+Unresolved: original producing Git/timestamps cannot be reconstructed; earlier final exposure cannot be undone; user approval is still needed for the proposed confirmation; publishing the committed repository remains pending. Scientific uncertainty includes cue decoding, a single narrow architecture/budget, frequency/repetition covariation with distance, pilot floor/ceiling behavior, and secondary D baseline dependence. No human-brain mechanism, climbing-performance effect, statistical significance, or broad novelty is asserted.

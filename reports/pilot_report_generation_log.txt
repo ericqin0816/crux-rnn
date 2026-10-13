@@ -1,0 +1,8 @@
+{
+  "report": "RUN_REPORT.md",
+  "report_generation_code_commit": "1e184c6aed075117c0578ba71b5ee5a2e14a9569",
+  "tests_passed": 17,
+  "proposal_config_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "proposed_final_started": false,
+  "historical_final_execution_disclosed": true
+}

@@ -1,0 +1,18 @@
+{
+  "basis": "pilot only; earlier final runtime not used",
+  "excludes": [
+    "environment setup",
+    "analysis and figure generation",
+    "reporting",
+    "unmeasured peak RAM"
+  ],
+  "pilot_cells": 20,
+  "pilot_mean_seconds_per_cell": 3.0254827250000003,
+  "pilot_raw_artifact_bytes": 26252005,
+  "project": "CruxRNN",
+  "projected_cell_seconds": 363.057927,
+  "projected_final_cells": 120,
+  "projected_phase_wall_seconds": 375.5574414,
+  "projected_raw_artifact_bytes": 157512030,
+  "proposal_not_executed": true
+}
