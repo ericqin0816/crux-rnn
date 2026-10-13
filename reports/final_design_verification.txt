@@ -1,0 +1,9 @@
+{
+  "verified_cells": 120,
+  "missing_cells": 0,
+  "distinct_saved_seed_values": 1560,
+  "all_data_and_complete_file_hashes_valid": true,
+  "config_sha256": "907b6540c9f49d8554105803fad58966c900c67eb260e9f510d379f4730ceecc",
+  "run_artifact_bytes": 157637661,
+  "no_statistical_subjects_other_than_run_ids": true
+}

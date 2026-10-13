@@ -1,0 +1,25 @@
+{
+  "phase": "source_figure2_sensitivity",
+  "mode": "source_exact",
+  "namespace": "source_figure2_sensitivity_v1",
+  "output_directory": "outputs/source_figure2_sensitivity",
+  "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+  "run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "distances": [
+    0
+  ],
+  "pre_per_sequence": 1000,
+  "train_per_sequence": 5000,
+  "eval_per_sequence": 100,
+  "D_examples": 2000,
+  "noise_sd": 0.1,
+  "eval_every": 25,
+  "cpu_threads": 1,
+  "source_vulnerability": false
+}

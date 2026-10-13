@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61,<76"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motor-rnn-similarity"
+version = "0.1.0"
+description = "Reproducible paired practice-schedule simulations"
+requires-python = ">=3.8"
+dependencies = ["torch", "numpy", "pandas", "scipy", "matplotlib", "scikit-learn", "joblib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

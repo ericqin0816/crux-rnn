@@ -1,0 +1,11 @@
+{
+  "command": [
+    "conda",
+    "env",
+    "create",
+    "-f",
+    "envs/reproduction.yml"
+  ],
+  "error": "[WinError 2] The system cannot find the file specified",
+  "exception_type": "FileNotFoundError"
+}

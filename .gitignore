@@ -1,0 +1,8 @@
+external/author_repo/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+outputs/
+envs/tools/
+artifacts/*.zip

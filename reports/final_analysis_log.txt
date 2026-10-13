@@ -1,0 +1,18 @@
+ distance  paired_runs  mean_difference_pp  median_difference_pp  ci_low_pp  ci_high_pp  blocked_noisy_accuracy_pct  IP_noisy_accuracy_pct
+        1           30            2.111111              0.000000   0.104683    4.258770                   88.450794              90.561905
+        2           30            4.125397              3.571429   1.268175    6.906389                   78.858730              82.984127
+        4           30           15.036508             11.690476  10.885635   19.168373                   60.876190              75.912698
+        7           30           36.725397             36.642857  32.529881   40.771468                   40.998413              77.723810
+{
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 1629977573,
+  "bootstrap_unit": "whole replicate IDs, with all four distances",
+  "ci_high": 6.655340136054422,
+  "ci_low": 5.199395313681027,
+  "intercept_pp": -6.265608465608466,
+  "replicate_count": 30,
+  "scientific_inference": true,
+  "slope_pp_per_hamming": 5.9329176114890405
+}
+
+Verified complete cells: 120 ; missing: 0

@@ -1,0 +1,30 @@
+{
+  "python": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Eric Qin\\Desktop\\proj1\\envs\\tools\\python3810\\tools\\python.exe",
+  "os": "Windows-10-10.0.26200-SP0",
+  "cpu": {
+    "returncode": 0,
+    "stdout": "{\n    \"Name\":  \"AMD Ryzen 7 8700F 8-Core Processor             \",\n    \"NumberOfCores\":  8,\n    \"NumberOfLogicalProcessors\":  16\n}\n",
+    "stderr": ""
+  },
+  "memory": {
+    "returncode": 0,
+    "stdout": "{\n    \"Caption\":  \"Microsoft Windows 11 Home\",\n    \"FreePhysicalMemory\":  2269332,\n    \"TotalVisibleMemorySize\":  16346872\n}\n",
+    "stderr": ""
+  },
+  "logical_cpu_count": 16,
+  "torch": "1.13.1+cpu",
+  "torch_device": "cpu",
+  "torch_default_threads": 8,
+  "experiment_threads": 1,
+  "torch_interop_threads": 8,
+  "cuda_available": false,
+  "torch_cuda_version": null,
+  "mps_available": false,
+  "conda_environment": {
+    "error": "[WinError 2] The system cannot find the file specified"
+  },
+  "conda_prefix": null,
+  "torch_build": "PyTorch built with:\n  - C++ Version: 199711\n  - MSVC 192829337\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/builder/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /GR /EHsc /w /bigobj -DUSE_PTHREADPOOL -openmp:experimental -IC:/actions-runner/_work/pytorch/pytorch/builder/windows/mkl/include -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DUSE_FBGEMM -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=0, USE_CUDNN=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, \n",
+  "accelerator_policy": "CPU only; no accelerator used"
+}

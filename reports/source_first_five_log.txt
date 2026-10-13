@@ -1,0 +1,5 @@
+{"status": "complete", "run_id": 0, "distance": 0, "elapsed_seconds": 2.3800817}
+{"status": "complete", "run_id": 1, "distance": 0, "elapsed_seconds": 2.3740116999999996}
+{"status": "complete", "run_id": 2, "distance": 0, "elapsed_seconds": 2.3672233}
+{"status": "complete", "run_id": 3, "distance": 0, "elapsed_seconds": 2.4313840000000013}
+{"status": "complete", "run_id": 4, "distance": 0, "elapsed_seconds": 2.492605900000001}

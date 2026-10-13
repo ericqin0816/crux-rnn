@@ -1,0 +1,7 @@
+{
+  "phase": "smoke", "mode": "controlled_similarity", "namespace": "smoke_v1",
+  "output_directory": "outputs/smoke", "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+  "run_ids": [0], "distances": [1,2,4,7], "pre_per_sequence": 20,
+  "train_per_sequence": 40, "eval_per_sequence": 10, "D_examples": 40,
+  "noise_sd": 0.1, "eval_every": 1, "cpu_threads": 1
+}

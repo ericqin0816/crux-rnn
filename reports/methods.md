@@ -1,0 +1,37 @@
+# Prespecified methods
+
+This is an independent implementation, a replication, and a focused computational extension of Song, Kim, and Kim (2026), [Scientific Reports](https://doi.org/10.1038/s41598-026-40162-w). It tests practice order and sequence similarity in one small artificial network. It does not test biological memory consolidation or establish effects in human learners. Climbing provides a possible motivation for thinking about movement patterns, not a validation dataset.
+
+## Model and optimization
+
+The complete seven-action cue is a tensor `(batch, 1, 7)`, with canonical classes 0–3 converted to cue values 1–4. One tanh `torch.nn.RNN` has seven input and seven hidden units. A linear readout has four logits; another linear layer feeds those raw logits back into seven input features. Hidden state starts at zero for each example. Seven outputs form `(batch, 7, 4)`. The source timing is preserved in both executed modes: one initial cue transition and seven feedback transitions, including the final unused transition. Labels are integer classes, equivalent to the source's argmax of one-hot labels. Default Torch initialization, float32 operations, mean cross-entropy over batch and positions, SGD learning rate .02, momentum zero, and batch size 20 are fixed. CPU is used throughout. Deterministic Torch algorithms and one intra-op/inter-op thread are set.
+
+## Source reproduction
+
+Ten random bases ×100 noisy copies yield 1,000 blocked pretraining examples (50 updates). Main training has three independent random bases ×5000 noisy copies (750 updates). Interleaving permutes the identical examples. Retention reuses training cues, and generalization uses 100 randomly drawn bases ×100 noisy copies. Duplicates and cross-set overlaps are not rejected, matching the inspected source. An optional configuration supplies 10,000 pretraining examples to address the caption discrepancy without altering the main replication. Optional vulnerability testing retains last-sequence-only retention; those optional protocols need a separate execution decision. See the audit and deviations ledgers for provenance additions.
+
+First inspect five new runs against every available saved-array shape, aggregate cross-entropies, and practice-direction patterns. Extend to 100 main-training runs if the measured five-run runtime makes that reasonable. This is not an attempt to reconstruct unsaved author random states.
+
+## Controlled similarity
+
+Pairwise Hamming distance is fixed at k=1,2,4,7. A is random. Exactly k positions are selected; at each selected position, B and C use two distinct actions different from A. All other positions match. All three distances must equal k. Action frequencies, adjacent repeats, longest repeated run, changed positions, and bases are saved. Ten unique pretraining bases, A/B/C, 100 unique generalization bases, and one D base have no exact overlap. No action-frequency or run-length matching is imposed, so these characteristics can accompany the similarity manipulation.
+
+Each A/B/C base has 5000 noisy training copies, one clean and 100 new noisy development copies, and one clean and 100 new noisy final copies. Generalization uses 100 unused unique bases with one clean and 100 noisy copies each. Noise is Gaussian SD .1, changes cues only, and uses distinct named streams for training/development/final/generalization. The training master data are created once and saved; only their example-ID order changes between schedules.
+
+For each run × k, pretrain once on ten bases ×100 copies, then clone the state into blocked and interleaved models. Hashes must match. Both use fresh identical SGD. Blocked presents 5000 copies each of three bases consecutively; interleaved reproducibly permutes all 15,000 IDs. ID multisets, exposures, and 750 updates must match. The final study has 30 entirely new IDs per k; each of ABC, ACB, BAC, BCA, CAB, CBA is assigned five times at each k. Assignments are saved before training and reused on resume.
+
+At updates 0,25,…,750, including boundaries 250 and 500, evaluate all three fixed development bases in clean and noisy conditions. `torch.no_grad()` prevents gradient recording; model hashes verify unchanged parameters. Evaluation makes no optimizer steps. These probes are not used to tune the final design. The sustained threshold is at least 90% mean noisy A/B/C action accuracy for three consecutive checkpoints. Record both the first qualifying and confirming update, or `not_reached`.
+
+## Secondary D experiment
+
+Clone each main-trained model and give both identical D examples in identical order: 2000 noisy copies, 100 updates. D is unused and random, not similarity-matched; record distances to A/B/C. Old clean and noisy development sets are evaluated at baseline and every D update. Final forgetting is accuracy before D minus accuracy after D using exactly the same held-out old-sequence final set. Compute it separately for clean and noisy conditions. D results are secondary; they do not isolate a causal effect of D similarity.
+
+## Execution and statistics
+
+Run tests before real simulations. Smoke uses reduced examples, all distances, and all pipeline stages; it supplies no scientific evidence. Pilot uses five new IDs at each distance and the real training budget. It is used only for runtime/software/resource/floor/ceiling diagnostics. No settings are adjusted to favor a direction. Freeze `configs/final.json`, its byte-level SHA-256, and a training-implementation fingerprint after pilot verification. Final IDs use an independent namespace. Seed streams are BLAKE2b, never Python `hash()`.
+
+The independent unit is a paired simulation run, not a noisy copy or output position. The primary outcome is held-out fresh-noisy final action accuracy, equally weighted across A/B/C. For each k retain all 30 IP-minus-blocked differences in percentage points and report mean, median, and percentile 95% bootstrap CI from 10,000 run-ID resamples. Resample full IDs across all four k values for the prespecified OLS `paired_difference ~ Hamming_distance` slope and its CI. Plot the four categorical effects as well. No p-values are required or planned. Clean accuracy, complete-sequence accuracy, cross-entropy, per-base/per-position/shared/differing accuracy, generalization, learning curves, and D forgetting are secondary. At k=7 shared accuracy is NaN with count zero.
+
+Learning-curve shading, where present, is ± one run-level standard error, not a bootstrap CI. Primary paired-effect error bars are bootstrap percentile 95% CIs. Clean and noisy figures and numeric outputs are separate.
+
+Checkpoints are atomically saved at least every 50 main updates and include model/optimizer states, update, RNG states, configuration and manifest hashes, run ID, distance, schedule, blocked order, and source commit. `--resume` verifies completed files and skips them, or continues an incomplete checkpoint. Metadata mismatches are refused by default; explicit `--force` is recorded. Final configuration and implementation changes are independently rejected even with that flag. Failures are retained; only corrupt data, assertion failures, or irrecoverable execution failures are eligible mechanical exclusion reasons. No scientific result warrants a rerun or exclusion.

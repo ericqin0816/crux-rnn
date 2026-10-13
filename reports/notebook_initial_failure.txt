@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "scripts/create_walkthrough.py", line 175, in <module>
+    exec(compile(ast.parse(source), "walkthrough-cell-{}".format(execution_count), "exec"), namespace)
+  File "C:\Users\Eric Qin\Desktop\proj1\envs\tools\python3810\tools\lib\ast.py", line 47, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 5
+    print('
+          ^
+SyntaxError: EOL while scanning string literal

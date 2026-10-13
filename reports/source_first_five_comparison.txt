@@ -1,0 +1,61 @@
+                    metric  new_runs  author_runs  new_shape author_shape  new_mean_loss  author_mean_loss
+          blocked_training         5          100   (5, 750)   (100, 750)       0.791488          0.757624
+      interleaved_training         5          100   (5, 750)   (100, 750)       0.985135          0.975204
+         blocked_retention         5          100 (5, 15000) (100, 15000)       1.285424          1.478705
+     interleaved_retention         5          100 (5, 15000) (100, 15000)       0.605468          0.634231
+    blocked_generalization         5          100 (5, 10000) (100, 10000)       2.452984          2.475091
+interleaved_generalization         5          100 (5, 10000) (100, 10000)       1.975530          1.985807
+        pre_generalization         5          100 (5, 10000) (100, 10000)       1.412459          1.410960
+{
+  "new": {
+    "blocked_training_loss_lower": true,
+    "blocked_switch_loss_increases": [
+      1.5169405698776246,
+      2.1272553741931914
+    ],
+    "IP_retention_loss_lower": true,
+    "IP_generalization_loss_lower": true,
+    "retention_loss_ABC_blocked": [
+      1.601996660232544,
+      1.8990312814712524,
+      0.35524383187294006
+    ],
+    "retention_loss_ABC_IP": [
+      0.6191815137863159,
+      0.6840975880622864,
+      0.5131252408027649
+    ],
+    "optional_vulnerability_rerun": false
+  },
+  "author": {
+    "blocked_training_loss_lower": true,
+    "blocked_switch_loss_increases": [
+      1.5323461162298917,
+      1.8683528063446282
+    ],
+    "IP_retention_loss_lower": true,
+    "IP_generalization_loss_lower": true,
+    "retention_loss_ABC_blocked": [
+      2.1819587100139857,
+      1.9534861336282492,
+      0.30066978189471366
+    ],
+    "retention_loss_ABC_IP": [
+      0.6452661324578226,
+      0.6199228556084335,
+      0.6375051568776667
+    ],
+    "noisy_last_sequence_loss_increase": {
+      "blocked": 3.261513135805726,
+      "IP": 2.7129795491695403
+    },
+    "pruned_last_sequence_loss_increase": {
+      "blocked": 1.0863007739931345,
+      "IP": 0.7479993450641632
+    },
+    "interf_last_sequence_loss_increase": {
+      "blocked": 1.2064722154289484,
+      "IP": 0.8670502018928528
+    }
+  }
+}
