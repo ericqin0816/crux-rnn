@@ -1,0 +1,18 @@
+{
+  "approval_required": true,
+  "assignment_sha256": "7510596d71df132ec3779c85c9bb9375c7cadb90d160308a6ed6fc2d5e943967",
+  "config_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "final_data_generated": false,
+  "historical_config_unchanged": "907b6540c9f49d8554105803fad58966c900c67eb260e9f510d379f4730ceecc",
+  "non_scientific_differences": [
+    "project identity fields",
+    "new unused seed namespace",
+    "new output directory"
+  ],
+  "prepared_at_utc": "2026-10-13T23:26:00.968317+00:00",
+  "project": "CruxRNN",
+  "proposal_configuration": "configs/final_proposed.json",
+  "scientific_parameters_changed": false,
+  "seed_namespace": "cruxrnn_final_proposed_v1",
+  "status": "proposed_only_not_executed"
+}

@@ -1,4 +1,4 @@
-# Questions to discuss with a professor
+# CruxRNN: questions to discuss with a professor
 
 1. **Why use Hamming distance?** It counts differing action positions directly and gives exact equal distances among A/B/C. It does not measure biomechanics, timing, chunks, or difficulty.
 2. **Why pair blocked and interleaved models?** They start from the same pretrained weights and see identical training examples; their within-run difference isolates presentation order for that family.

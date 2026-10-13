@@ -1,0 +1,10 @@
+{
+  "pretraining_duplicate_count": 1,
+  "main_duplicate_count": 0,
+  "generalization_duplicate_count": 32,
+  "pretraining_main_exact_matches": 0,
+  "pretraining_generalization_exact_matches": 6,
+  "main_generalization_exact_matches": 0,
+  "runs_with_generalization_duplicates": 28,
+  "runs_with_any_generalization_training_overlap": 6
+}

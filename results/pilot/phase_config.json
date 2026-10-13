@@ -1,0 +1,27 @@
+{
+  "D_examples": 2000,
+  "cpu_threads": 1,
+  "distances": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "eval_every": 25,
+  "eval_per_sequence": 100,
+  "mode": "controlled_similarity",
+  "namespace": "pilot_v1",
+  "noise_sd": 0.1,
+  "output_directory": "outputs/pilot",
+  "phase": "pilot",
+  "pre_per_sequence": 100,
+  "run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+  "train_per_sequence": 5000
+}

@@ -30,3 +30,4 @@ desktop.ini
 .git-credentials
 credentials.json
 secrets/
+/provenance/delivery_status.json

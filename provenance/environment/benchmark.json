@@ -1,0 +1,25 @@
+{
+  "acceleration_used": false,
+  "cuda_available": false,
+  "extension_device": "cpu",
+  "measurements": [
+    {
+      "device": "cpu",
+      "seconds": 0.12741860000000005,
+      "threads": 1,
+      "updates": 100
+    },
+    {
+      "device": "cpu",
+      "seconds": 0.14466,
+      "threads": 2,
+      "updates": 100
+    },
+    {
+      "device": "cpu",
+      "seconds": 0.13917650000000004,
+      "threads": 4,
+      "updates": 100
+    }
+  ]
+}

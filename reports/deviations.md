@@ -1,4 +1,4 @@
-# Deviations and implementation repair ledger
+# CruxRNN: deviations and implementation repair ledger
 
 This file records environment attempts, mechanical repairs, and any departures from the requested design. It is updated from execution evidence. Scientific outcomes never justify rerunning or excluding a seed.
 
@@ -24,3 +24,11 @@ All 20 pilot run-by-distance cells were hash-verified, with 40 schedule observat
 - The first notebook-builder execution failed with `SyntaxError: EOL while scanning string literal`: its Python strings interpreted an intended notebook `\n` escape too early. Changed notebook-code template strings to raw strings and executed all cells again. Initial failure evidence is retained in `reports/notebook_initial_failure.txt`; the successful execution log is separate. No simulation or analysis values changed.
 - Visual inspection found that the k=7 shared-position annotation overlapped the legend in the noisy error panel. Moved only that annotation into empty space. The frozen training implementation/configuration is unchanged; figures were regenerated from the same saved data and deterministic bootstrap indices.
 - Checkpoints are saved atomically every 50 main updates by replacing the latest checkpoint; every historical 50-update file is not archived. This satisfies restart cadence but limits retrospective inspection of intermediate weight states. Full loss and probe histories remain saved.
+
+## Later pilot-review instruction and CruxRNN provenance
+
+The earlier request had already been executed through 120 final paired cells when the later instruction to stop at pilot review arrived. Existing outputs and original documents are preserved. This review launches no additional final seeds, and an explicit execution gate blocks the final phase. The new proposal retains scientific parameters but uses a fresh fixed namespace/output location because the old final namespace has already been executed. Prior outcome exposure is disclosed; it cannot be retroactively undone.
+
+Original producing Git SHAs and phase UTC start/end times were not recorded before execution. The first commit `2673c9ca11ca9fc701a1d13129f0cb371385ea70` was a later snapshot, not a contemporaneous producing commit. New meaningful commits record actual review changes without rewriting that history. Future executions require a clean committed tree and capture Git/environment/config/time and outcome metadata. Existing numerical modules are unchanged, so old outputs are not attributed to changed experiment code. The newly retitled notebook reads curated pilot copies; historical final notebook/report bytes remain archived.
+
+The user identified `ericqin0816` as the intended GitHub owner. The connector reported another account; it was not used for writes. Following the user's browser instruction, the browser's owner selector verified `ericqin0816`, and an empty public `crux-rnn` repository was created. The local remote uses its verified clone URL. No code/results were pushed, and no final release/tag was made.

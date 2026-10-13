@@ -4,8 +4,13 @@
   "title": "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network",
   "description": "Computational study of sequence similarity, blocked vs interleaved practice, and interference in a minimal recurrent neural network.",
   "verified_connected_login": "omgbroops",
-  "remote_configured": false,
-  "repository_created_by_this_project": false,
+  "intended_owner_from_user": "ericqin0816",
+  "connection_matches_intended_owner": false,
+  "verified_browser_login": "ericqin0816",
+  "github_workflow": "Verified logged-in Brave browser; mismatched connector was not used for writes",
+  "repository_url": "https://github.com/ericqin0816/crux-rnn",
+  "remote_configured": true,
+  "repository_created_by_this_project": true,
   "pushed_by_this_project": false,
-  "creation_status": "Connector lookup returned 404; no repository-creation tool or authenticated gh CLI was available."
+  "creation_status": "Empty public repository created in the user's logged-in browser under ericqin0816. No files pushed."
 }

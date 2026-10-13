@@ -1,0 +1,13 @@
+{
+  "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+  "repository": "https://github.com/YJ-0000/RNN_during_RP_and_IP",
+  "root_LICENSE_found": false,
+  "file_sha256": {
+    "Code01_Interleaved_vs_Repetitive.py": "3b3b932549b480636cdb7190e9792c5343fab08c4ad853a572ce81963d69180c",
+    "Code02_Plot.py": "a3ffefd9b273db0100850ece8041423c34d9e7df81aec96862c83f5796bd7477",
+    "utils/DataGen.py": "79fedb94a5d49dfed376d3035c602b0c85b375391db315d2d186b5ea0c4923f3",
+    "utils/NetworkModels.py": "b3abbdbac72efed56ceb814e902ae6ebcd4e18b10fe011c1f4b1574931b1020d",
+    "utils/TorchFunctions.py": "5ef20b641ee2f194043c1985bb4413e4576f36f217558704167de4d4e78f4ecc",
+    "environment.yml": "10d7c1c20dd1e904275e42b7617a9db319953fd3fcf41510cf83f4110c578263"
+  }
+}

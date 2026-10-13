@@ -1,0 +1,19 @@
+{
+  "command": [
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/smoke.json"
+  ],
+  "config_file_sha256": "504f41562be74720f197f7e41868cd7eb8c6ac5de86daa17b4b1909480c66cc8",
+  "distances": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "failed_cells": 0,
+  "requested_run_ids": [
+    0
+  ],
+  "wall_seconds": 0.9192162000000001
+}

@@ -1,4 +1,4 @@
-# Audit of the pinned reference
+# CruxRNN: audit of the pinned reference
 
 Reference: Song, Youngjo; Kim, Hakjoo; Kim, Taewon (2026), [Scientific Reports](https://www.nature.com/articles/s41598-026-40162-w), DOI 10.1038/s41598-026-40162-w. [Accessible article text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13022130/).
 
@@ -16,6 +16,8 @@ The paper Figure 2 caption states **10,000 pretraining trials**. The paper Metho
 | `utils/TorchFunctions.py` | Consecutive batches, cross-entropy, no epoch recycling. Main retention uses training inputs rather than fresh evaluation noise. Vulnerability retention slices the **last third**, hence only the last main sequence. Weight noise SD .1 and random pruning .05 accumulate; index zero is an unperturbed baseline. Interference uses 2000 inputs/100 SGD updates plus baseline. Separate vulnerability calls generate different interference data for RP and IP. |
 | `Code02_Plot.py` | Loads saved arrays and draws loss plots and comparisons. Learning-curve bands at lines 113 and 116 divide run-axis standard deviation by sqrt(`shape[1]`), the update-axis length (750), instead of run count (`shape[0]`, 100): wrong effective sample count. Other vulnerability bands use the run count. Our analysis uses run-level resampling. |
 | `environment.yml` | Export of Linux-specific Conda build strings, Python 3.8.10 and CPU PyTorch 1.13.1. This cannot be imported verbatim as a Windows environment. Portable version targets are provided separately. |
+
+The source names consecutive batch updates “epochs” (`total_num_epochs_train` / plotting labels), and the paper figure defines one epoch as 20 trials. With 15,000 examples and batch size 20 this means **750 optimizer updates during one pass through the main dataset**, not 750 passes through all 15,000 examples. CruxRNN uses “updates” consistently for this quantity; it preserves the source's actual training timing.
 
 **No repository root LICENSE was found during the audit.** The article's license does not establish a license for repository source. No author source was copied into the independent package. Local numerical parity tests import the ignored reference only when it is present.
 

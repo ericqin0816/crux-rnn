@@ -1,0 +1,53 @@
+{
+  "author": {
+    "IP_generalization_loss_lower": true,
+    "IP_retention_loss_lower": true,
+    "blocked_switch_loss_increases": [
+      1.5323461162298917,
+      1.8683528063446282
+    ],
+    "blocked_training_loss_lower": true,
+    "interf_last_sequence_loss_increase": {
+      "IP": 0.8670502018928528,
+      "blocked": 1.2064722154289484
+    },
+    "noisy_last_sequence_loss_increase": {
+      "IP": 2.7129795491695403,
+      "blocked": 3.261513135805726
+    },
+    "pruned_last_sequence_loss_increase": {
+      "IP": 0.7479993450641632,
+      "blocked": 1.0863007739931345
+    },
+    "retention_loss_ABC_IP": [
+      0.6452661324578226,
+      0.6199228556084335,
+      0.6375051568776667
+    ],
+    "retention_loss_ABC_blocked": [
+      2.1819587100139857,
+      1.9534861336282492,
+      0.30066978189471366
+    ]
+  },
+  "new": {
+    "IP_generalization_loss_lower": true,
+    "IP_retention_loss_lower": true,
+    "blocked_switch_loss_increases": [
+      1.5243194380402563,
+      1.9761994446814062
+    ],
+    "blocked_training_loss_lower": true,
+    "optional_vulnerability_rerun": false,
+    "retention_loss_ABC_IP": [
+      0.6443198323249817,
+      0.6088156700134277,
+      0.6299672722816467
+    ],
+    "retention_loss_ABC_blocked": [
+      2.2945973873138428,
+      2.0232880115509033,
+      0.27783653140068054
+    ]
+  }
+}

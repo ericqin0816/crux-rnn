@@ -6,6 +6,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import pandas as pd
 from motor_rnn.provenance import file_hash
 
+gate = json.loads(Path("provenance/execution_gate.json").read_text(encoding="utf-8"))
+if not gate.get("final_training_allowed", False):
+    raise SystemExit("CruxRNN is at pilot review. Use scripts/write_pilot_report.py; historical final reports are preserved separately.")
+
 root = Path.cwd()
 final = root / "outputs/final/analysis"
 primary = pd.read_csv(final / "primary_summary.csv")

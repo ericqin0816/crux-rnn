@@ -1,0 +1,23 @@
+{
+  "command": [
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/pilot.json"
+  ],
+  "config_file_sha256": "57fa0f9b8a43a99b0d816198eed52b287c5a22f33f0eedcf1fba6163fb7c9a8d",
+  "distances": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "failed_cells": 0,
+  "requested_run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wall_seconds": 62.5929069
+}

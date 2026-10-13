@@ -2,3 +2,9 @@
 configs/final.json -text whitespace=cr-at-eol
 configs/final.sha256 -text whitespace=cr-at-eol
 src/motor_rnn/*.py -text
+configs/final_proposed.json -text whitespace=cr-at-eol
+configs/final_proposed.sha256 -text whitespace=cr-at-eol
+configs/*.json -text whitespace=cr-at-eol
+results/** -text whitespace=cr-at-eol
+provenance/environment/** -text whitespace=cr-at-eol
+reports/history/** -text whitespace=cr-at-eol

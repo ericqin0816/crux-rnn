@@ -41,7 +41,13 @@ def begin_execution(root, config, config_path, command):
 
 
 def finish_execution(path, record, successes, failures, wall_seconds):
+    for result in successes:
+        result["producing_code_git_commit"] = record["code_git_commit"] if result["status"] == "complete" else None
+        if result["status"] == "verified_existing":
+            result["provenance_note"] = "This execution verified prior artifacts; its code commit is not their generating commit."
     record.update({"finished_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                    "success_records": successes, "failure_records": failures, "wall_seconds": wall_seconds,
+                   "newly_completed_cells": sum(r["status"] == "complete" for r in successes),
+                   "verified_existing_cells": sum(r["status"] == "verified_existing" for r in successes),
                    "state": "failed" if failures else "completed"})
     write_json(path, record)

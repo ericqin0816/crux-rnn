@@ -1,0 +1,47 @@
+{
+  "all_completed_artifact_hashes_verified": true,
+  "completed": [
+    {
+      "distance": 1,
+      "run_id": 0
+    },
+    {
+      "distance": 2,
+      "run_id": 0
+    },
+    {
+      "distance": 4,
+      "run_id": 0
+    },
+    {
+      "distance": 7,
+      "run_id": 0
+    }
+  ],
+  "config_file": {
+    "D_examples": 40,
+    "cpu_threads": 1,
+    "distances": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "eval_every": 1,
+    "eval_per_sequence": 10,
+    "mode": "controlled_similarity",
+    "namespace": "smoke_v1",
+    "noise_sd": 0.1,
+    "output_directory": "outputs/smoke",
+    "phase": "smoke",
+    "pre_per_sequence": 20,
+    "run_ids": [
+      0
+    ],
+    "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+    "train_per_sequence": 40
+  },
+  "failure_records": 0,
+  "measured_cell_runtime_seconds": 0.5161255999999992,
+  "missing": []
+}

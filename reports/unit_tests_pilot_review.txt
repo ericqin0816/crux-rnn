@@ -17,6 +17,6 @@ test_final_blocked_without_approval (test_execution_gate.ExecutionGateTests) ...
 test_pilot_allowed_and_explicit_final_gate (test_execution_gate.ExecutionGateTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 0.203s
+Ran 17 tests in 0.196s
 
 OK

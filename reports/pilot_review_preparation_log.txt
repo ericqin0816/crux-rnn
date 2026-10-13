@@ -1,0 +1,10 @@
+{
+  "curated_completed_cells": {
+    "source_exact": 100,
+    "smoke": 4,
+    "pilot": 20
+  },
+  "proposal_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "proposed_final_started": false,
+  "historical_final_execution_disclosed": true
+}

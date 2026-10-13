@@ -1,4 +1,4 @@
-"""Bundle own source plus generated outputs; exclude reference/runtime code."""
+"""CruxRNN: bundle own source and generated outputs, excluding reference/runtime code."""
 import json
 import sys
 import zipfile
@@ -25,7 +25,7 @@ manifest = {"final_config_sha256": file_hash("configs/final.json"), "source_comm
             "files": {p.relative_to(root).as_posix(): file_hash(p) for p in sorted(files)}}
 artifacts = root / "artifacts"
 artifacts.mkdir(exist_ok=True)
-destination = artifacts / "motor_rnn_project.zip"
+destination = artifacts / "crux-rnn-project.zip"
 with zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=3) as archive:
     archive.writestr("PACKAGE_MANIFEST.json", json.dumps(manifest, indent=2) + "\n")
     for path in sorted(files):
