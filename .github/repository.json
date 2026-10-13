@@ -1,16 +1,18 @@
 {
-  "name": "crux-rnn",
-  "project": "CruxRNN",
-  "title": "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network",
+  "creation_status": "Empty public repository created in the user's logged-in browser under ericqin0816. No files pushed.",
   "description": "Computational study of sequence similarity, blocked vs interleaved practice, and interference in a minimal recurrent neural network.",
+  "github_workflow": "Verified logged-in Brave browser; mismatched connector was not used for writes",
+  "initial_connector_matches_intended_owner": false,
   "initial_mismatched_connector_login": "omgbroops",
   "intended_owner_from_user": "ericqin0816",
-  "initial_connector_matches_intended_owner": false,
-  "verified_browser_login": "ericqin0816",
-  "github_workflow": "Verified logged-in Brave browser; mismatched connector was not used for writes",
-  "repository_url": "https://github.com/ericqin0816/crux-rnn",
+  "name": "crux-rnn",
+  "pre_final_remote_verified_commit": "fa3b7c34496274569944b85c74d2c6c4cd443fe4",
+  "project": "CruxRNN",
+  "pushed": true,
+  "pushed_by_this_project": false,
   "remote_configured": true,
   "repository_created_by_this_project": true,
-  "pushed_by_this_project": false,
-  "creation_status": "Empty public repository created in the user's logged-in browser under ericqin0816. No files pushed."
+  "repository_url": "https://github.com/ericqin0816/crux-rnn",
+  "title": "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network",
+  "verified_browser_login": "ericqin0816"
 }

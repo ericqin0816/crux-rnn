@@ -1,0 +1,27 @@
+{
+  "approval_recorded_at_utc": "2026-10-13T23:51:36.237886+00:00",
+  "approval_source": "User pasted instruction: The pilot checkpoint is approved.",
+  "approved_by": "user",
+  "author_checkout_ignored": true,
+  "blocked_order_assignment_sha256": "7510596d71df132ec3779c85c9bb9375c7cadb90d160308a6ed6fc2d5e943967",
+  "config_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "environment_directory": "provenance/environment/confirmatory",
+  "expected_main_models": 240,
+  "expected_pairs": 120,
+  "fresh_output_directory_verified_absent": true,
+  "namespace": "cruxrnn_final_proposed_v1",
+  "numerical_implementation_sha256": "e16274af61696a90c379fb16165ca1ff8309e0f1f02d8d4526da050588d4d168",
+  "pre_execution_reporting_changes": [
+    "Requested sample SD (ddof=1) of paired differences",
+    "300-dpi PNG export",
+    "Descriptive group metrics table"
+  ],
+  "pre_final_git_commit": "fa3b7c34496274569944b85c74d2c6c4cd443fe4",
+  "pre_final_remote_verified_commit": "fa3b7c34496274569944b85c74d2c6c4cd443fe4",
+  "project": "CruxRNN",
+  "scientific_configuration_changed": false,
+  "secret_pattern_scan_matches": 0,
+  "test_log": "reports/unit_tests_confirmatory_preflight.txt",
+  "tracked_checkpoint_or_temp_files": 0,
+  "tracked_files_above_10MB": 0
+}

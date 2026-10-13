@@ -1,7 +1,10 @@
 {
-  "project": "CruxRNN",
-  "final_training_allowed": false,
-  "reason": "The user requires a pilot review and explicit approval before any additional final experiment.",
+  "approval_record": "provenance/final_approval.json",
+  "approved_configuration_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "approved_namespace": "cruxrnn_final_proposed_v1",
+  "final_training_allowed": true,
+  "historical_snapshot_commit": "2673c9ca11ca9fc701a1d13129f0cb371385ea70",
   "prior_final_execution_exists": true,
-  "historical_snapshot_commit": "2673c9ca11ca9fc701a1d13129f0cb371385ea70"
+  "project": "CruxRNN",
+  "reason": "The user explicitly approved the fresh confirmatory experiment and final GitHub delivery."
 }

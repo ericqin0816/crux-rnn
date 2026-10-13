@@ -17,7 +17,7 @@ from motor_rnn.provenance import seed, file_hash, write_json
 COLORS = {"blocked": "#276AA0", "interleaved": "#D95C25"}
 LABELS = {"blocked": "Blocked", "interleaved": "Interleaved"}
 plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.right": False,
-                     "figure.dpi": 120, "savefig.dpi": 180, "axes.grid": True, "grid.alpha": .18})
+                     "figure.dpi": 120, "savefig.dpi": 300, "axes.grid": True, "grid.alpha": .18})
 
 
 def collect(config):
@@ -92,7 +92,8 @@ def bootstrap(config, runs, target):
     for i, k in enumerate(distances):
         lo, hi = np.percentile(resampled_means[:, i], [2.5, 97.5])
         summary.append({"distance": int(k), "paired_runs": len(values), "mean_difference_pp": float(values[:, i].mean()),
-                        "median_difference_pp": float(np.median(values[:, i])), "ci_low_pp": float(lo), "ci_high_pp": float(hi),
+                        "median_difference_pp": float(np.median(values[:, i])),
+                        "sd_difference_pp": float(values[:, i].std(ddof=1)), "ci_low_pp": float(lo), "ci_high_pp": float(hi),
                         "blocked_noisy_accuracy_pct": float(100 * runs[(runs.distance == k) & (runs.schedule == "blocked")].final_noisy_action_accuracy.mean()),
                         "IP_noisy_accuracy_pct": float(100 * runs[(runs.distance == k) & (runs.schedule == "interleaved")].final_noisy_action_accuracy.mean())})
     summary = pd.DataFrame(summary)
@@ -223,6 +224,10 @@ def controlled_figures(config, frames, target, summary, paired):
     savefig(fig, directory, "position_errors")
     pos = metric_frame[(metric_frame.stage == "before_D") & metric_frame.group.isin(["shared", "differing"])]
     pos.groupby(["distance", "schedule", "split", "group"])[["action_accuracy", "action_count"]].mean().to_csv(target / "position_summary.csv")
+    # Descriptive summaries retain every prespecified split/group; no extra inference.
+    metric_frame.groupby(["distance", "schedule", "stage", "split", "group"])[
+        ["action_accuracy", "sequence_accuracy", "cross_entropy", "action_count"]
+    ].mean().to_csv(target / "group_metrics_summary.csv")
 
 
 def main():
