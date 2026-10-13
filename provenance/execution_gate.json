@@ -1,0 +1,7 @@
+{
+  "project": "CruxRNN",
+  "final_training_allowed": false,
+  "reason": "The user requires a pilot review and explicit approval before any additional final experiment.",
+  "prior_final_execution_exists": true,
+  "historical_snapshot_commit": "2673c9ca11ca9fc701a1d13129f0cb371385ea70"
+}

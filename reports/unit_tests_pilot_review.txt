@@ -1,0 +1,22 @@
+test_author_model_numerical_parity_when_available (test_core.DesignTests) ... ok
+test_equal_exposure (test_core.DesignTests) ... ok
+test_equal_optimizer_update_counts (test_core.DesignTests) ... ok
+test_evaluation_does_not_modify_weights (test_core.DesignTests) ... ok
+test_final_blocked_order_balance (test_core.DesignTests) ... ok
+test_forbidden_sequence_overlap (test_core.DesignTests) ... ok
+test_forward_shape_and_source_timing (test_core.DesignTests) ... ok
+test_identical_paired_initial_weights (test_core.DesignTests) ... ok
+test_known_metrics (test_core.DesignTests) ... ok
+test_pairwise_hamming (test_core.DesignTests) ... ok
+test_resume_matches_uninterrupted_tiny_run (test_core.DesignTests) ... ok
+test_seed_namespace_separation (test_core.DesignTests) ... ok
+test_sustained_threshold (test_core.DesignTests) ... ok
+test_targets_unchanged_by_noise (test_core.DesignTests) ... ok
+test_execution_identity_rejects_dirty_tree (test_execution_gate.ExecutionGateTests) ... ok
+test_final_blocked_without_approval (test_execution_gate.ExecutionGateTests) ... ok
+test_pilot_allowed_and_explicit_final_gate (test_execution_gate.ExecutionGateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.203s
+
+OK

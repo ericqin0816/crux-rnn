@@ -1,0 +1,11 @@
+{
+  "name": "crux-rnn",
+  "project": "CruxRNN",
+  "title": "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network",
+  "description": "Computational study of sequence similarity, blocked vs interleaved practice, and interference in a minimal recurrent neural network.",
+  "verified_connected_login": "omgbroops",
+  "remote_configured": false,
+  "repository_created_by_this_project": false,
+  "pushed_by_this_project": false,
+  "creation_status": "Connector lookup returned 404; no repository-creation tool or authenticated gh CLI was available."
+}

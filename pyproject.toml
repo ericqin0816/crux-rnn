@@ -3,9 +3,9 @@ requires = ["setuptools>=61,<76"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "motor-rnn-similarity"
+name = "crux-rnn"
 version = "0.1.0"
-description = "Reproducible paired practice-schedule simulations"
+description = "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network"
 requires-python = ">=3.8"
 dependencies = ["torch", "numpy", "pandas", "scipy", "matplotlib", "scikit-learn", "joblib"]
 
