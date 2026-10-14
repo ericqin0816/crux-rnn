@@ -1,5 +1,7 @@
 # CruxRNN: prior execution and the pilot approval gate
 
+The following review-state account describes the period before the user's subsequent approval. The final section records the approved confirmation; the earlier provenance gap remains unchanged.
+
 The first user specification requested execution through the full controlled final experiment. Before the later instruction to stop at pilot review arrived, that work had already completed: 100 source-compatible main-training simulations, four smoke run-by-distance cells, 20 pilot cells, and 120 final cells (30 at each distance). The earlier final outputs were also analyzed and displayed. It is therefore false to say the final experiment has never started or that its outcomes were never seen.
 
 The new instruction establishes a gate for **any additional final execution**. No further final models, datasets, or optimizer updates are launched during this review. `provenance/execution_gate.json` blocks the runner's final phase. No final release, Git tag, repository push, or remote publication is created.
@@ -11,3 +13,7 @@ The original experiments were executed while their implementation was uncommitte
 `configs/final_proposed.json` prepares an **unexecuted, independently seeded confirmation** with the same scientific settings. Only descriptive identity, output location, and a new fixed namespace differ from the historical configuration. The new namespace prevents recycling already-executed final seeds; it was not chosen by comparing prospective outcomes. No prospective data were generated. Its 30×4 balanced blocked-order assignment is prepared without looking at proposed outcomes. Approval is still required before it can run.
 
 Because prior final outcomes were seen, this review cannot retroactively restore an untouched preregistration. Any future run must be described as an independent confirmation following prior observation, with that exposure disclosed. Neither pilot estimates nor historical final outcomes justify changing the architecture, budgets, noise, metrics, distances, threshold, or exclusion policy.
+
+## Subsequent approved confirmation
+
+The user approved the pilot and the unchanged fresh configuration on October 13, 2026 (local date). The exact pre-final commit `fa3b7c34496274569944b85c74d2c6c4cd443fe4` was pushed to ericqin0816/crux-rnn and remotely verified first. The producing execution commit was `28a2b07bb40afcf7af9b907612e01ce722902bcc`, with byte-identical numerical modules. All 120 new paired cells completed in namespace `cruxrnn_final_proposed_v1`, with zero failures/exclusions and contemporaneous Git/config/environment/UTC/hash records. Only these new cells enter the final inference and figures. The earlier 120 cells remain exploratory/provenance-incomplete at `outputs/final/` and are not pooled.

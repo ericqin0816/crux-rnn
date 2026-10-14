@@ -1,0 +1,48 @@
+{
+  "command": [
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/final_proposed.json"
+  ],
+  "config_file_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "distances": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "failed_cells": 0,
+  "requested_run_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "wall_seconds": 381.34222079999995
+}

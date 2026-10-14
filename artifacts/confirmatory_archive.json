@@ -1,0 +1,11 @@
+{
+  "archive": "artifacts/cruxrnn-confirmatory-data.zip",
+  "archive_crc_verified": true,
+  "bytes": 117456062,
+  "config_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "earlier_exploratory_data_included": false,
+  "file_count": 1956,
+  "main_models": 240,
+  "paired_cells": 120,
+  "sha256": "092bfe2324a77e6782d80034b3cf4ec5fb79017990d625be8803f0eb5f96b676"
+}

@@ -6,9 +6,9 @@ CruxRNN is a computational replication and controlled extension of Song, Kim, an
 
 The project was motivated by questions about repetition, route similarity, and motor learning in speed climbing, but all experiments are synthetic neural-network simulations and do not use human participants or biological recordings.
 
-**Current status: pilot review; additional final execution is blocked pending approval.** Implementation, tests, source reproduction, smoke testing, and five pilot replicate IDs at each distance are complete and reverified. An earlier final experiment was already executed before this later approval gate arrived. That fact is preserved in [prior execution](reports/prior_execution.md); it cannot truthfully be described as never started. The newly proposed independent confirmation has not started, and pilot data are not final scientific findings.
+**Current status: approved confirmatory final experiment complete.** All 120 fresh paired cells / 240 main models are verified, with zero failures or exclusions. Source reproduction (100 pairs), smoke (4) and pilot (20) remain separate. The earlier 120-pair exploratory study has incomplete producing-SHA/timestamp provenance and is excluded from these final results; [prior execution](reports/prior_execution.md) discloses that history.
 
-Start with [RUN_REPORT.md](RUN_REPORT.md), the [student notebook](notebooks/walkthrough.ipynb), and [pilot diagnostics](reports/results.md). The local repository connects to the empty public [ericqin0816/crux-rnn](https://github.com/ericqin0816/crux-rnn) repository. Code and results have not been pushed.
+Start with [RUN_REPORT.md](RUN_REPORT.md), the [student notebook](notebooks/walkthrough.ipynb), and [confirmatory results](reports/results.md). Code, tables, figures and provenance are published in [ericqin0816/crux-rnn](https://github.com/ericqin0816/crux-rnn). Release tag: `v1.0-final-experiment`.
 
 ## 1. Research question
 
@@ -44,7 +44,7 @@ At k=1,2,4,7 exactly k positions differ, with distinct A/B/C actions at changed 
 
 ## 9. Blocked versus interleaved conditions
 
-Schedules use the same master noisy examples, targets, starting weights, SGD settings, exposures, and update counts. Blocked presents whole sequence blocks; interleaved permutes identical IDs. The proposed final assignment gives each of the six block orders five repeats per distance. Paired cloned models learn identical D examples/order for 100 updates.
+Schedules use the same master noisy examples, targets, starting weights, SGD settings, exposures, and update counts. Blocked presents whole sequence blocks; interleaved permutes identical IDs. The frozen final assignment gives each of the six block orders five repeats per distance. Paired cloned models learn identical D examples/order for 100 updates.
 
 ## 10. Repository structure
 
@@ -52,9 +52,9 @@ Schedules use the same master noisy examples, targets, starting weights, SGD set
 src/motor_rnn/        independent numerical implementation
 tests/               standard-library unittest controls
 scripts/             execution, analysis, plotting, reporting
-configs/             source/smoke/pilot and proposed final configurations
+configs/             source/smoke/pilot and frozen final configurations
 envs/                exact environment targets and setup evidence
-results/             tracked source/smoke/pilot CSVs, figures, manifests
+results/             tracked source/smoke/pilot/final CSVs, figures, manifests
 provenance/          environment, phase/hash indexes, approval gate
 reports/             audit, methods, deviations, review and prior history
 notebooks/           saved-data student walkthrough
@@ -80,7 +80,7 @@ $taskPython = Join-Path (Get-Location) 'envs/tools/python3810/tools/python.exe'
 & $taskPython -m unittest discover -s tests -v
 ```
 
-Review suite: 17 passed, zero failed/skipped: 14 scientific controls plus three approval/provenance checks. [Complete log](reports/unit_tests_pilot_review.txt). A public clone without the ignored author checkout skips the audit-only source-model parity test.
+Final suite: 17 passed, zero failed/skipped: 14 scientific controls plus three approval/provenance checks. [Complete log](reports/unit_tests_confirmatory_final.txt). A public clone without the ignored author checkout skips the audit-only source-model parity test.
 
 ## 13. Running reproduction
 
@@ -112,29 +112,50 @@ One reduced-budget ID exercises all four distances and every pipeline stage, inc
 
 Five namespace-separated IDs × four distances yield 20 paired cells / 40 main schedule models. Scientific settings were not changed to favor outcomes. [Raw metrics](results/pilot/raw_metrics.csv), [run-level metrics](results/pilot/run_level.csv), [diagnostic summary](results/pilot/primary_summary.csv), [timings](results/pilot/execution_times.csv).
 
-## 16. Final experiment status
+## 16. Running the final experiment
 
-`configs/final_proposed.json` and its `.sha256` marker describe an unexecuted confirmation with the same scientific settings, a fresh fixed namespace, and saved balanced orders. `provenance/execution_gate.json` blocks it pending approval. No proposed final data, model initialization, or optimizer updates have occurred. No final tag/release exists. [Prior execution disclosure](reports/prior_execution.md) distinguishes the earlier completed final study.
+The user approved the fresh confirmation after pilot review. Frozen config: `configs/final_proposed.json`, SHA-256 `26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006`; namespace `cruxrnn_final_proposed_v1`. Completed 30 IDs at each k=1,2,4,7, with five instances of each blocked order per k. Pre-final Git checkpoint `fa3b7c34496274569944b85c74d2c6c4cd443fe4` was pushed before execution; producing commit `28a2b07bb40afcf7af9b907612e01ce722902bcc` has byte-identical numerical modules. [Approval](provenance/final_approval.json) and [execution records](results/confirmatory/execution_records/) record the relationship.
+
+```powershell
+& $taskPython scripts/run_experiment.py --config configs/final_proposed.json --resume
+& $taskPython scripts/analyze.py --config configs/final_proposed.json
+& $taskPython scripts/verify_design.py --config configs/final_proposed.json
+& $taskPython scripts/publish_confirmatory.py
+& $taskPython scripts/create_walkthrough.py
+```
+
+Start from a clean Git tree; the runner verifies existing complete cells and only continues incomplete work. A fresh checkout regenerates all cells from the frozen seeds. [Prior execution disclosure](reports/prior_execution.md) distinguishes the earlier exploratory study.
 
 ## 17. Results
 
-Current reports describe source agreement and smoke/pilot diagnostics. The pilot checks runtime, complete execution, learning behavior, floor/ceiling issues, and storage; it does not establish a final effect. Pilot CSV columns named `final_noisy_*` denote the held-out split within pilot runs, not the 30-run experiment. The prior final report is preserved separately.
+Fresh-noisy final action accuracy, before D; differences/intervals are percentage points:
+
+| k | pairs | Blocked % | IP % | Mean IP−blocked pp | Median pp | SD pp | 95% CI low pp | 95% CI high pp |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 30 | 89.002 | 91.116 | 2.114 | 0.000 | 9.097 | -1.086 | 5.437 |
+| 2 | 30 | 80.221 | 86.651 | 6.430 | 4.357 | 7.930 | 3.878 | 9.418 |
+| 4 | 30 | 61.006 | 76.019 | 15.013 | 14.238 | 9.451 | 11.722 | 18.459 |
+| 7 | 30 | 40.163 | 79.029 | 38.865 | 38.905 | 12.254 | 34.549 | 43.122 |
+
+The intervals include zero at k=1; the direction at these distances remains uncertain. The categorical mean differences increase across the four distances. The prespecified slope is **6.124 pp per Hamming unit**, with a run-ID bootstrap 95% CI **[5.383, 6.853]**.
+
+[Full results](reports/results.md) include clean/complete-sequence/CE/A-B-C/position/generalization/speed/D outcomes. [Every individual pair](results/confirmatory/paired_differences.csv) is retained. Source, smoke, pilot and earlier exploratory data were not pooled. Measured final phase runtime: 381.342 seconds (6.36 minutes); zero failures/exclusions.
 
 ## 18. Figures
 
-Original PNG/PDF pairs are tracked under `results/pilot/figures/` and `results/smoke/figures/`. Clean/noisy panels are separate; pilot labels say diagnostic only. Nominal five-ID intervals are not final evidence. `scripts/analyze.py` regenerates figures. Source comparison plots use arrays, not copied author figures.
+Five original figures use only the new confirmation: learning curves, final accuracy, paired differences with bootstrap CIs, D forgetting, and shared/differing position errors. All export 300-dpi PNG plus PDF in [results/confirmatory/figures](results/confirmatory/figures/). Clean/noisy panels are separate; k=7 shared positions have NaN/count zero. `scripts/analyze.py` regenerates them. Pilot/smoke figures retain diagnostic labels in their separate directories.
 
-![Pilot development probes, diagnostic only](results/pilot/figures/learning_curves.png)
+![Confirmatory paired differences and bootstrap CIs](results/confirmatory/figures/paired_differences.png)
 
 ## 19. Limitations
 
-The full cue contains the targets, making this numeric decoding rather than unseen-movement prediction or biological consolidation. Fixed architecture/budget, unmatched action frequencies/repeats, and ordinal cues limit generality. Copies/positions are not independent subjects; D similarity is observed. Original pre-execution Git/timestamp records are missing. Prior final outcomes were seen, so a later run is a disclosed independent confirmation, not a retroactively untouched preregistration.
+The full cue contains the targets, making this numeric decoding rather than unseen-movement prediction or biological consolidation. Fixed architecture/budget, unmatched action frequencies/repeats, and ordinal cues limit generality. Copies/positions are not independent subjects; D similarity is observed. Original exploratory/source/smoke/pilot pre-execution Git/timestamp records are missing; the new confirmation records them contemporaneously. Prior exploratory outcomes were seen, so this run is a disclosed independent confirmation, not a retroactively untouched preregistration.
 
 ## 20. Reproducibility
 
 Git/code snapshot → config → named BLAKE2b seeds → data/manifest hashes → checkpoints → metrics → analysis → figures → report. Historical producing Git SHAs were not recorded; later snapshot/reverification commits are honestly labeled in `provenance/stages.json`. Future runs require a clean committed tree and record producing SHA, environment/config fingerprints, UTC times, failures/successes, and artifact hashes. Ignored raw arrays/checkpoints are indexed in `results/*/artifact_index.json`. GitHub is a transparency record, not automatic scientific validation.
 
-The existing local folder remains `proj1`; the project/repository/distribution is CruxRNN / `crux-rnn`. [GitHub setup and later push command](docs/github_setup.md). No Git LFS or final release/tag is created.
+The existing local folder remains `proj1`; the project/repository/distribution is CruxRNN / `crux-rnn`. [GitHub delivery](docs/github_setup.md). No Git LFS is required. Full raw confirmation arrays/checkpoints are supplied as `cruxrnn-confirmatory-data.zip` with a SHA-256/CRC record in `artifacts/confirmatory_archive.json`; extract at the release checkout root. The release provides this asset separately from Git history. Historical outputs stay separate.
 
 ## 21. Citation / acknowledgments
 

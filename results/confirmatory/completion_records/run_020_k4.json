@@ -1,0 +1,25 @@
+{
+  "config_hash": "b7064f5805df5eee714daf65698adbc59e23e45c1589d65deddf3d7d4c27a2bb",
+  "distance": 4,
+  "elapsed_seconds": 3.1157649000000447,
+  "files": {
+    "D_development.csv": "eb21f676a57913e88926532716820d43652b5bf4c5bf435a434867f3a15102c3",
+    "blocked_D.pt": "d3015d75a04cf7bd8497bce6366cc688e68259cc734a917fafe16a35397088d4",
+    "blocked_main.pt": "e7d32a0a2f5c6e3d7b1c8049e134376014f1901b2306120716bca2f968b02d45",
+    "data.npz": "c9035cfe89f8df714ed02a9ab7a32af322ad17e983622a347e257152f20b4cda",
+    "development.csv": "e4604f90586035667ea0e6142da19a304b32315fdc4d912e9e29d9f77cad95fc",
+    "interleaved_D.pt": "c353ec9ce2655101b8b9a4e6a791dcb7410ea1677c2de3cabb3c0ac7056a560f",
+    "interleaved_main.pt": "dc9b0b3f67e15b4793cd51122739d2c10bdd74ae8edc5ba0267ae812913522e0",
+    "manifest.json": "b4a141cc0d2edcf1565da58f27086a0d571b6e32686de6f3c4ac5fd6d8213655",
+    "metrics.csv": "c3a72dd3733b1a24fb6dcc4bb6f5dc9781645411411c58177765ea41005965d2",
+    "orders.npz": "6ec5afe426a6ea7d0b344a7594fcc7c8924d7664b5ea91f5bc72b3f689e6f16a",
+    "pair_checks.json": "ebe93178c1d4431d97877af08da6240df1c32f1c16bb30de6792adc8b92b1644",
+    "pretrained_weights.pt": "c897152a7e0570c12f62a1590e33cce53496ede8ec1ef079e4fa5a54debe1694",
+    "pretraining.pt": "ced97f2bbff98e304b8612670bbd6662530cf4e845cee597501f6e00c359c311",
+    "run_level.csv": "961983ba93743c77bcef04128e8c55171b5e37d847150ed30eb870f469c95c8e",
+    "training.csv": "3647295c04ba3aebdb0e0bac59a0d709807eede0afacc7c7c69925cadaae80d0"
+  },
+  "main_updates_each": 750,
+  "run_id": 20,
+  "status": "complete"
+}

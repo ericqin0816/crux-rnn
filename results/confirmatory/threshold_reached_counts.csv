@@ -1,0 +1,9 @@
+distance,schedule,reached_count
+1,blocked,28
+1,interleaved,28
+2,blocked,0
+2,interleaved,9
+4,blocked,0
+4,interleaved,1
+7,blocked,0
+7,interleaved,4

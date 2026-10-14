@@ -1,4 +1,4 @@
-"""CruxRNN: build a professor-readable pilot notebook from curated saved data."""
+"""CruxRNN: build a professor-readable confirmatory notebook from curated saved data."""
 import ast
 import contextlib
 import hashlib
@@ -16,11 +16,11 @@ markdown("""# CruxRNN
 
 **Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network**
 
-This notebook walks through **saved, verified pilot simulations**, using the small CSVs and example metadata tracked in the repository. It does not train models. Pilot outputs verify the pipeline and are not final scientific findings. You need basic Python, NumPy, and pandas. The numerical experiments used Python 3.8.10 and PyTorch 1.13.1 CPU.
+This notebook walks through **saved, verified confirmatory final simulations**, using the small CSVs and example metadata tracked in the repository. It does not train models. The 120 new paired cells use the approved fresh namespace; source, smoke, pilot and earlier exploratory data are separate. You need basic Python, NumPy, and pandas. The numerical experiments used Python 3.8.10 and PyTorch 1.13.1 CPU.
 
 We compare practicing three movement patterns in separate blocks with practicing the same examples in a shuffled order. Climbing offers an analogy: you might repeat one move pattern or alternate several. The data here are artificial action labels, not climbing measurements. The results concern this network and do not prove anything about human brains.
 
-Read `../RUN_REPORT.md` for completion counts, runtime, and deviations. An earlier final experiment was already executed before the later pilot approval gate; that history is disclosed in `../reports/prior_execution.md`. The new proposed confirmation remains unexecuted and requires approval.
+Read `../RUN_REPORT.md` for completion counts, runtime, and deviations. An earlier final experiment was already executed before the later pilot approval gate; that history is disclosed in `../reports/prior_execution.md`. The approved new confirmation is complete, with producing Git SHA, frozen config, UTC times and artifact hashes recorded.
 """)
 code(r"""from pathlib import Path
 import json
@@ -32,10 +32,10 @@ root = Path.cwd()
 if not (root / 'pyproject.toml').exists():
     root = root.parent
 assert (root / 'pyproject.toml').exists()
-analysis = root / 'results' / 'pilot'
+analysis = root / 'results' / 'confirmatory'
 verification = json.loads((analysis / 'verification.json').read_text())
-print('Verified pilot run pairs:', len(verification['completed']))
-print('Missing pilot run pairs:', len(verification['missing']))
+print('Verified confirmatory run pairs:', len(verification['completed']))
+print('Missing confirmatory run pairs:', len(verification['missing']))
 """)
 markdown("""## A, B, and C
 
@@ -66,7 +66,7 @@ Development and final evaluation use newly generated noise, with separate determ
 code(r"""example_cue = np.array(example['training_example_cue'])
 example_target = np.array(example['training_example_target'])
 print('Training cue shape:', example['train_cue_shape'])
-print('Pilot held-out noisy cue shape:', example['final_probe_cue_shape'])
+print('Final held-out noisy cue shape:', example['final_probe_cue_shape'])
 print('Clean cue:', example_target + 1)
 print('Noisy cue:', np.round(example_cue, 3))
 print('Target:', example_target)
@@ -83,7 +83,7 @@ markdown("""## Practice order and pairing
 
 Blocked training presents all 5000 A examples, then all 5000 B examples, then all 5000 C examples, or another prespecified permutation of the three blocks. Interleaved training shuffles all 15,000 example IDs. Both schedules use exactly the same noisy cues and targets.
 
-For each simulation, one pretrained network is cloned into both schedules, with identical weight hashes and fresh identical SGD optimizers. This **paired design** helps isolate order. The pilot uses five independent IDs at each k. The proposed final confirmation would use 30 IDs per k, with each of the six block orders appearing five times. Its fresh namespace has not been executed. Smoke and pilot data would not be pooled into final inference.
+For each simulation, one pretrained network is cloned into both schedules, with identical weight hashes and fresh identical SGD optimizers. This **paired design** helps isolate order. The confirmation uses 30 independent IDs at each k, with each of the six block orders appearing five times. The fresh namespace is cruxrnn_final_proposed_v1. Smoke, pilot and earlier exploratory data were not pooled into final inference.
 """)
 code(r"""print('First blocked example IDs:', example['blocked_first_ids'])
 print('First interleaved example IDs:', example['interleaved_first_ids'])
@@ -98,7 +98,7 @@ Action accuracy is the fraction of the seven action predictions that are correct
 
 The primary outcome averages **fresh-noisy final action accuracy equally over A/B/C**. Clean accuracy is reported separately. Development probes track all three bases at updates 0,25,…,750 and never modify weights. The speed threshold requires at least 90% noisy mean accuracy for three consecutive checkpoints; otherwise it is `not_reached`.
 
-![Pilot fixed development probes, diagnostic only](../results/pilot/figures/learning_curves.png)
+![Confirmatory fixed development probes](../results/confirmatory/figures/learning_curves.png)
 """)
 code(r"""runs = pd.read_csv(analysis / 'run_level.csv')
 summary = pd.read_csv(analysis / 'primary_summary.csv')
@@ -113,16 +113,18 @@ For each run and k, subtract blocked accuracy from interleaved accuracy. Multipl
 
 The independent unit is the simulation run. A noisy copy or a position shares the same model and training history, so it cannot be treated as another independent subject.
 
-The proposed final analysis would resample 30 simulation IDs with replacement 10,000 times, then average their paired differences. The 2.5th and 97.5th percentiles form a percentile 95% confidence interval. The slope analysis resamples whole IDs with **all four distances together**. This uncertainty concerns the artificial model/generator; it does not cover biological uncertainty. The five-ID pilot is not a substitute for that final analysis.
+The prespecified final analysis resamples 30 simulation IDs with replacement 10,000 times, then averages their paired differences. The 2.5th and 97.5th percentiles form a percentile 95% confidence interval. The slope analysis resamples whole IDs with **all four distances together**. This uncertainty concerns the artificial model/generator; it does not cover biological uncertainty. The five-ID pilot was used only for diagnostics and remains separately available.
 """)
 code(r"""paired = pd.read_csv(analysis / 'paired_differences.csv')
 print(paired.head(8).round(3).to_string(index=False))
 matrix = paired.pivot(index='run_id', columns='distance', values='IP_minus_blocked_pp')
-print('Pilot matrix: rows are independent IDs, columns are distances:', matrix.shape)
-print('Future bootstrap samples complete rows, retaining all four columns together.')
-print('Pilot estimates above are diagnostic; no final conclusions are drawn here.')
+print('Confirmatory matrix: rows are independent IDs, columns are distances:', matrix.shape)
+assert matrix.shape == (30, 4)
+print('Bootstrap samples complete rows, retaining all four columns together.')
+print(summary[['distance', 'median_difference_pp', 'sd_difference_pp', 'ci_low_pp', 'ci_high_pp']].round(3).to_string(index=False))
+print('Prespecified slope and interval:', json.loads((analysis / 'trend.json').read_text()))
 """)
-markdown("""![Pilot categorical differences, diagnostic only](../results/pilot/figures/paired_differences.png)
+markdown("""![Confirmatory categorical paired differences](../results/confirmatory/figures/paired_differences.png)
 
 Inspect all four values rather than relying only on a straight-line slope. A slope can conceal a nonlinear pattern. No p-values are required for this project.
 """)
@@ -132,7 +134,7 @@ After main practice, both trained models are cloned and given the same 2000 exam
 
 **Forgetting = old final accuracy before D − old final accuracy after D.** The identical held-out final set is used twice. Positive means an accuracy drop; negative means improvement. D distance is recorded but not manipulated, making this a secondary experiment. A model that starts near a floor has less accuracy available to lose, so raw forgetting differences need baseline context.
 
-![Pilot A/B/C during D, diagnostic only](../results/pilot/figures/D_forgetting.png)
+![Confirmatory A/B/C during D](../results/confirmatory/figures/D_forgetting.png)
 """)
 code(r"""print('D distances to A/B/C for this example:', manifest['D_distances_to_ABC'])
 secondary = pd.read_csv(analysis / 'secondary_summary.csv')
@@ -145,7 +147,7 @@ Shared and differing positions are scored separately. For k=7 there are **zero s
 
 Generalization here means decoding **100 previously unseen complete cues**, not acquiring a new physical skill. Clean and noisy generalization are separate. Action frequencies and repeated-action patterns are recorded but not matched across k. The task uses ordinal cue values 1–4, only seven hidden units, a fixed training budget, and no offline consolidation process.
 
-The pilot diagnostics and limitations are in `../reports/results.md` and `../reports/plain_english.md`. Use `../reports/professor_questions.md` to prepare a discussion about what the model can and cannot establish. This notebook does not report results for the unexecuted proposed confirmation.
+The confirmatory results and limitations are in `../reports/results.md` and `../reports/plain_english.md`. Use `../reports/professor_questions.md` to prepare a discussion about what the model can and cannot establish. The results describe this artificial network and generator; prior outcome exposure is disclosed.
 """)
 code(r"""positions = pd.read_csv(analysis / 'position_summary.csv')
 print(positions[(positions['distance'] == 7) & (positions['group'] == 'shared')]
@@ -172,8 +174,8 @@ for cell in cells:
 notebook = {"nbformat": 4, "nbformat_minor": 5, "cells": cells,
             "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
                          "language_info": {"name": "python", "version": "3.8.10"},
-                         "project": "CruxRNN", "phase": "pilot_review",
-                         "execution_provenance": "Each code cell executed sequentially against curated historical pilot outputs; no training code in notebook."}}
+                         "project": "CruxRNN", "phase": "confirmatory_final",
+                         "execution_provenance": "Each code cell executed sequentially against curated fresh confirmatory outputs; no training code in notebook."}}
 directory = Path("notebooks")
 directory.mkdir(exist_ok=True)
 (directory / "walkthrough.ipynb").write_text(json.dumps(notebook, indent=2) + "\n", encoding="utf-8")

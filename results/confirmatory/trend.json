@@ -1,0 +1,11 @@
+{
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 2201906250,
+  "bootstrap_unit": "whole replicate IDs, with all four distances",
+  "ci_high": 6.853441043083901,
+  "ci_low": 5.382686130007559,
+  "intercept_pp": -5.828306878306883,
+  "replicate_count": 30,
+  "scientific_inference": true,
+  "slope_pp_per_hamming": 6.123960695389267
+}

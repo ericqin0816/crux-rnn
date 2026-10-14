@@ -1,0 +1,561 @@
+{
+  "all_completed_artifact_hashes_verified": true,
+  "completed": [
+    {
+      "distance": 1,
+      "run_id": 0
+    },
+    {
+      "distance": 2,
+      "run_id": 0
+    },
+    {
+      "distance": 4,
+      "run_id": 0
+    },
+    {
+      "distance": 7,
+      "run_id": 0
+    },
+    {
+      "distance": 1,
+      "run_id": 1
+    },
+    {
+      "distance": 2,
+      "run_id": 1
+    },
+    {
+      "distance": 4,
+      "run_id": 1
+    },
+    {
+      "distance": 7,
+      "run_id": 1
+    },
+    {
+      "distance": 1,
+      "run_id": 2
+    },
+    {
+      "distance": 2,
+      "run_id": 2
+    },
+    {
+      "distance": 4,
+      "run_id": 2
+    },
+    {
+      "distance": 7,
+      "run_id": 2
+    },
+    {
+      "distance": 1,
+      "run_id": 3
+    },
+    {
+      "distance": 2,
+      "run_id": 3
+    },
+    {
+      "distance": 4,
+      "run_id": 3
+    },
+    {
+      "distance": 7,
+      "run_id": 3
+    },
+    {
+      "distance": 1,
+      "run_id": 4
+    },
+    {
+      "distance": 2,
+      "run_id": 4
+    },
+    {
+      "distance": 4,
+      "run_id": 4
+    },
+    {
+      "distance": 7,
+      "run_id": 4
+    },
+    {
+      "distance": 1,
+      "run_id": 5
+    },
+    {
+      "distance": 2,
+      "run_id": 5
+    },
+    {
+      "distance": 4,
+      "run_id": 5
+    },
+    {
+      "distance": 7,
+      "run_id": 5
+    },
+    {
+      "distance": 1,
+      "run_id": 6
+    },
+    {
+      "distance": 2,
+      "run_id": 6
+    },
+    {
+      "distance": 4,
+      "run_id": 6
+    },
+    {
+      "distance": 7,
+      "run_id": 6
+    },
+    {
+      "distance": 1,
+      "run_id": 7
+    },
+    {
+      "distance": 2,
+      "run_id": 7
+    },
+    {
+      "distance": 4,
+      "run_id": 7
+    },
+    {
+      "distance": 7,
+      "run_id": 7
+    },
+    {
+      "distance": 1,
+      "run_id": 8
+    },
+    {
+      "distance": 2,
+      "run_id": 8
+    },
+    {
+      "distance": 4,
+      "run_id": 8
+    },
+    {
+      "distance": 7,
+      "run_id": 8
+    },
+    {
+      "distance": 1,
+      "run_id": 9
+    },
+    {
+      "distance": 2,
+      "run_id": 9
+    },
+    {
+      "distance": 4,
+      "run_id": 9
+    },
+    {
+      "distance": 7,
+      "run_id": 9
+    },
+    {
+      "distance": 1,
+      "run_id": 10
+    },
+    {
+      "distance": 2,
+      "run_id": 10
+    },
+    {
+      "distance": 4,
+      "run_id": 10
+    },
+    {
+      "distance": 7,
+      "run_id": 10
+    },
+    {
+      "distance": 1,
+      "run_id": 11
+    },
+    {
+      "distance": 2,
+      "run_id": 11
+    },
+    {
+      "distance": 4,
+      "run_id": 11
+    },
+    {
+      "distance": 7,
+      "run_id": 11
+    },
+    {
+      "distance": 1,
+      "run_id": 12
+    },
+    {
+      "distance": 2,
+      "run_id": 12
+    },
+    {
+      "distance": 4,
+      "run_id": 12
+    },
+    {
+      "distance": 7,
+      "run_id": 12
+    },
+    {
+      "distance": 1,
+      "run_id": 13
+    },
+    {
+      "distance": 2,
+      "run_id": 13
+    },
+    {
+      "distance": 4,
+      "run_id": 13
+    },
+    {
+      "distance": 7,
+      "run_id": 13
+    },
+    {
+      "distance": 1,
+      "run_id": 14
+    },
+    {
+      "distance": 2,
+      "run_id": 14
+    },
+    {
+      "distance": 4,
+      "run_id": 14
+    },
+    {
+      "distance": 7,
+      "run_id": 14
+    },
+    {
+      "distance": 1,
+      "run_id": 15
+    },
+    {
+      "distance": 2,
+      "run_id": 15
+    },
+    {
+      "distance": 4,
+      "run_id": 15
+    },
+    {
+      "distance": 7,
+      "run_id": 15
+    },
+    {
+      "distance": 1,
+      "run_id": 16
+    },
+    {
+      "distance": 2,
+      "run_id": 16
+    },
+    {
+      "distance": 4,
+      "run_id": 16
+    },
+    {
+      "distance": 7,
+      "run_id": 16
+    },
+    {
+      "distance": 1,
+      "run_id": 17
+    },
+    {
+      "distance": 2,
+      "run_id": 17
+    },
+    {
+      "distance": 4,
+      "run_id": 17
+    },
+    {
+      "distance": 7,
+      "run_id": 17
+    },
+    {
+      "distance": 1,
+      "run_id": 18
+    },
+    {
+      "distance": 2,
+      "run_id": 18
+    },
+    {
+      "distance": 4,
+      "run_id": 18
+    },
+    {
+      "distance": 7,
+      "run_id": 18
+    },
+    {
+      "distance": 1,
+      "run_id": 19
+    },
+    {
+      "distance": 2,
+      "run_id": 19
+    },
+    {
+      "distance": 4,
+      "run_id": 19
+    },
+    {
+      "distance": 7,
+      "run_id": 19
+    },
+    {
+      "distance": 1,
+      "run_id": 20
+    },
+    {
+      "distance": 2,
+      "run_id": 20
+    },
+    {
+      "distance": 4,
+      "run_id": 20
+    },
+    {
+      "distance": 7,
+      "run_id": 20
+    },
+    {
+      "distance": 1,
+      "run_id": 21
+    },
+    {
+      "distance": 2,
+      "run_id": 21
+    },
+    {
+      "distance": 4,
+      "run_id": 21
+    },
+    {
+      "distance": 7,
+      "run_id": 21
+    },
+    {
+      "distance": 1,
+      "run_id": 22
+    },
+    {
+      "distance": 2,
+      "run_id": 22
+    },
+    {
+      "distance": 4,
+      "run_id": 22
+    },
+    {
+      "distance": 7,
+      "run_id": 22
+    },
+    {
+      "distance": 1,
+      "run_id": 23
+    },
+    {
+      "distance": 2,
+      "run_id": 23
+    },
+    {
+      "distance": 4,
+      "run_id": 23
+    },
+    {
+      "distance": 7,
+      "run_id": 23
+    },
+    {
+      "distance": 1,
+      "run_id": 24
+    },
+    {
+      "distance": 2,
+      "run_id": 24
+    },
+    {
+      "distance": 4,
+      "run_id": 24
+    },
+    {
+      "distance": 7,
+      "run_id": 24
+    },
+    {
+      "distance": 1,
+      "run_id": 25
+    },
+    {
+      "distance": 2,
+      "run_id": 25
+    },
+    {
+      "distance": 4,
+      "run_id": 25
+    },
+    {
+      "distance": 7,
+      "run_id": 25
+    },
+    {
+      "distance": 1,
+      "run_id": 26
+    },
+    {
+      "distance": 2,
+      "run_id": 26
+    },
+    {
+      "distance": 4,
+      "run_id": 26
+    },
+    {
+      "distance": 7,
+      "run_id": 26
+    },
+    {
+      "distance": 1,
+      "run_id": 27
+    },
+    {
+      "distance": 2,
+      "run_id": 27
+    },
+    {
+      "distance": 4,
+      "run_id": 27
+    },
+    {
+      "distance": 7,
+      "run_id": 27
+    },
+    {
+      "distance": 1,
+      "run_id": 28
+    },
+    {
+      "distance": 2,
+      "run_id": 28
+    },
+    {
+      "distance": 4,
+      "run_id": 28
+    },
+    {
+      "distance": 7,
+      "run_id": 28
+    },
+    {
+      "distance": 1,
+      "run_id": 29
+    },
+    {
+      "distance": 2,
+      "run_id": 29
+    },
+    {
+      "distance": 4,
+      "run_id": 29
+    },
+    {
+      "distance": 7,
+      "run_id": 29
+    }
+  ],
+  "config_file": {
+    "D_examples": 2000,
+    "batch_size": 20,
+    "bootstrap_samples": 10000,
+    "cpu_threads": 1,
+    "device": "cpu",
+    "distances": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "dtype": "float32",
+    "eval_every": 25,
+    "eval_per_sequence": 100,
+    "exclusion_policy": "mechanical assertion, corrupt data, or irrecoverable execution failure only",
+    "generated_actions": 7,
+    "hidden_size": 7,
+    "implementation_sha256": "e16274af61696a90c379fb16165ca1ff8309e0f1f02d8d4526da050588d4d168",
+    "input_size": 7,
+    "learning_rate": 0.02,
+    "learning_threshold": {
+      "accuracy": 0.9,
+      "consecutive_checkpoints": 3
+    },
+    "mode": "controlled_similarity",
+    "momentum": 0.0,
+    "namespace": "cruxrnn_final_proposed_v1",
+    "noise_sd": 0.1,
+    "output_directory": "outputs/cruxrnn_final_proposed_v1",
+    "output_size": 4,
+    "phase": "final",
+    "pre_per_sequence": 100,
+    "primary_metric": "equally weighted A/B/C fresh-noisy final action accuracy",
+    "project": "CruxRNN",
+    "repository_name": "crux-rnn",
+    "run_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "source_commit": "31f58bb6de90d1fffcb752c0b97afb7df51479a7",
+    "source_forward_timing": true,
+    "title": "CruxRNN: Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network",
+    "train_per_sequence": 5000
+  },
+  "failure_records": 0,
+  "measured_cell_runtime_seconds": 369.01462330000015,
+  "missing": []
+}

@@ -1,19 +1,7 @@
-# CruxRNN: GitHub preparation
+# CruxRNN: GitHub delivery
 
-Repository name: `crux-rnn`. Description:
+Repository: [ericqin0816/crux-rnn](https://github.com/ericqin0816/crux-rnn), public. `origin` is `https://github.com/ericqin0816/crux-rnn.git`. The user's browser verified owner ericqin0816; the mismatched connector was not used for writes. Git authenticated normally for pushes; no credential was extracted.
 
-> Computational study of sequence similarity, blocked vs interleaved practice, and interference in a minimal recurrent neural network.
+The clean pre-final commit `fa3b7c34496274569944b85c74d2c6c4cd443fe4` was pushed and independently checked against remote main before training. The approved producing commit `28a2b07bb40afcf7af9b907612e01ce722902bcc` was also pushed. Final result and one explicit SHA-recording documentation commit are published after verification; see RUN_REPORT for that relationship. Release target: `v1.0-final-experiment`, **CruxRNN v1.0 — Final Experiment**.
 
-The intended owner, explicitly supplied by the user, is [ericqin0816](https://github.com/ericqin0816). The connector returned a different login, `omgbroops`; it was not used for writes. The user directed browser use. The logged-in browser's repository form confirmed owner `ericqin0816`, and the empty public [crux-rnn repository](https://github.com/ericqin0816/crux-rnn) was created with the requested description. The local `origin` remote points to its verified clone URL. No code/results have been pushed. No credential was guessed or extracted.
-
-The repository and remote already exist. To publish the reviewed local history later, inspect the destination and run:
-
-```powershell
-git remote -v
-git branch -M main
-git push -u origin main
-```
-
-Expected `origin`: `https://github.com/ericqin0816/crux-rnn.git`. Do not point the project at an unrelated existing repository. Keep `external/author_repo/`, environments, raw generated arrays, large checkpoints, secrets, and local archives excluded. No Git LFS is needed for the curated CSVs and figures. Browser proof is saved locally at `artifacts/cruxrnn_repo_created.png`.
-
-GitHub records code, methods, configuration, execution evidence, and limitations; hosting the repository does not validate scientific conclusions automatically. The current project is a pilot-review publication state with an explicit disclosure of earlier final execution. Do not create `v1.0-final-experiment` or a final release before a later approved and verified release decision.
+Curated tables, gzip CSV histories, five PNG/PDF figures, 120 manifests/completion records and hash indexes are tracked. Large arrays and checkpoints are excluded from Git and supplied in the separate confirmatory data release asset. Author checkout, environments, credentials and temporary files remain ignored. The prior exploratory data are not included in that asset. No Git LFS is required. GitHub provides transparency, not independent scientific validation.

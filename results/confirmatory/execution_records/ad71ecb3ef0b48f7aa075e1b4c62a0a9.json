@@ -1,0 +1,1257 @@
+{
+  "code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+  "command": [
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/final_proposed.json"
+  ],
+  "config_canonical_sha256": "cdff02d6cdbd9f3f2345736943c97159c800b4b2f07de1f3fbe823cf9b0fff07",
+  "config_file_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "environment": {
+    "accelerator_policy": "CPU only; no accelerator used",
+    "conda_environment": {
+      "error": "[WinError 2] The system cannot find the file specified"
+    },
+    "conda_prefix": null,
+    "cpu": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n    \"Name\":  \"AMD Ryzen 7 8700F 8-Core Processor             \",\n    \"NumberOfCores\":  8,\n    \"NumberOfLogicalProcessors\":  16\n}\n"
+    },
+    "cuda_available": false,
+    "executable": "C:\\Users\\Eric Qin\\Desktop\\proj1\\envs\\tools\\python3810\\tools\\python.exe",
+    "experiment_threads": 1,
+    "logical_cpu_count": 16,
+    "memory": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n    \"Caption\":  \"Microsoft Windows 11 Home\",\n    \"FreePhysicalMemory\":  2056452,\n    \"TotalVisibleMemorySize\":  16346872\n}\n"
+    },
+    "mps_available": false,
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+    "torch": "1.13.1+cpu",
+    "torch_build": "PyTorch built with:\n  - C++ Version: 199711\n  - MSVC 192829337\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/builder/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /GR /EHsc /w /bigobj -DUSE_PTHREADPOOL -openmp:experimental -IC:/actions-runner/_work/pytorch/pytorch/builder/windows/mkl/include -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DUSE_FBGEMM -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=0, USE_CUDNN=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, \n",
+    "torch_cuda_version": null,
+    "torch_default_threads": 8,
+    "torch_device": "cpu",
+    "torch_interop_threads": 8
+  },
+  "environment_sha256": "d226ea96749eb8b16c74cd3032daf33aa2ed19117580b65593c68bff25536e7c",
+  "execution_id": "ad71ecb3ef0b48f7aa075e1b4c62a0a9",
+  "failure_records": [],
+  "finished_at_utc": "2026-10-13T23:58:05.047976+00:00",
+  "implementation_sha256": "e16274af61696a90c379fb16165ca1ff8309e0f1f02d8d4526da050588d4d168",
+  "newly_completed_cells": 120,
+  "phase": "final",
+  "pip_freeze_sha256": "5030b9b3a17c9cdbfc07a135289bd1a8a51ad8fcf2b8707244ae7c672f4ded17",
+  "project": "CruxRNN",
+  "seed_namespace": "cruxrnn_final_proposed_v1",
+  "started_at_utc": "2026-10-13T23:51:43.738254+00:00",
+  "state": "completed",
+  "success_records": [
+    {
+      "completion_record_sha256": "49c083ec81e6d3ba93963346f10542ce8780e94834076d38f19a559ed1cae2e9",
+      "distance": 1,
+      "elapsed_seconds": 3.1663523999999996,
+      "manifest_sha256": "859997c0a4f164b7da483fe9a421c8e4cd7a8b32025e0262b80161cad964b2aa",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_000_k1",
+      "run_id": 0,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b8d9efe147a1ddc42850a3a6034e0284dfc838adeb8927343f4c6391c4fd9fef",
+      "distance": 2,
+      "elapsed_seconds": 3.087623,
+      "manifest_sha256": "5f72f61122af986d2a4bc09a1957d62bb17066f166a424c2d55e026eed9eb2ef",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_000_k2",
+      "run_id": 0,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "722c7d4ab9ab0c643574d08bf886dee25c127028a215d045e589c0a94bb71883",
+      "distance": 4,
+      "elapsed_seconds": 3.068552099999999,
+      "manifest_sha256": "3b64c65137046a9f0fa24b80c93f437a3ed5bbb6341ed0564dbcad6185d2e631",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_000_k4",
+      "run_id": 0,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "dc158cd59c29c50240769a4a5d4d4292566b210adc845c5d97a13b00ee778ac7",
+      "distance": 7,
+      "elapsed_seconds": 3.0405619,
+      "manifest_sha256": "2ea3b3a2f3df21e60eefda1aa4fa8e723b131fcf3fb3c04bae9ff26cdc0f9e39",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_000_k7",
+      "run_id": 0,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "04b2d8cd3c4d0a72eaabe5d74ca484d3cde062bff9af9ed65b861e0aef84513a",
+      "distance": 1,
+      "elapsed_seconds": 3.0568653,
+      "manifest_sha256": "500c29d35afae24f098097407bbaaf99f9817df0a800637c5f6de5db4cf6e32e",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_001_k1",
+      "run_id": 1,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "5e753c5659c2c21f62936df7e73cb6fa4ded12b0d3774bf8f9ee8c787efcc186",
+      "distance": 2,
+      "elapsed_seconds": 3.0756897999999993,
+      "manifest_sha256": "1ee7d20438b808dcdf6da1b853598cac273687cad7b630b43e040e1e65c279da",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_001_k2",
+      "run_id": 1,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "c869bdf5592a455ea94bf59d3faf92f7b484e217ae6a0c29ace1db65f6e7b35f",
+      "distance": 4,
+      "elapsed_seconds": 3.0641659000000026,
+      "manifest_sha256": "e4e1b1b6dc8a5b60f5e38cf405a9ead2e377c5e9025e9840e9d63163ac62bdb5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_001_k4",
+      "run_id": 1,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "12c5dda57e07b375c1232cd3cedd48ef260a9769b146a2c0247946c654e59acc",
+      "distance": 7,
+      "elapsed_seconds": 3.0933119000000033,
+      "manifest_sha256": "99ca349f094de1cb437e5636b51c7873477562f6042d429c2d80da6217200817",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_001_k7",
+      "run_id": 1,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "51657959755d22ab78838c22e63e0b64abab44641be066b12392eb4c064d52dd",
+      "distance": 1,
+      "elapsed_seconds": 3.1053013999999983,
+      "manifest_sha256": "dd4a0e4b17a553d35977674bcf0b9943006517487fea4dfc0b10e7b016454d5f",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_002_k1",
+      "run_id": 2,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "d9d09491a2665f069e38108f43b2154e2b36702c0a96f6150b55c4bd57eef53f",
+      "distance": 2,
+      "elapsed_seconds": 3.1226455999999985,
+      "manifest_sha256": "867650e9deb8736c3b7b642ae1d988e7fd784a6e254d2c62c2103d7fb144eeff",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_002_k2",
+      "run_id": 2,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "c29d6e96442f182632f072a39803d0c767cb8796c16b18b637659284e9b2a1cb",
+      "distance": 4,
+      "elapsed_seconds": 3.101026900000001,
+      "manifest_sha256": "07064a688fd1f5ef4a72e4cc7fbcfdcbb72004cb3203480c8750db770f9b243a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_002_k4",
+      "run_id": 2,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "41ad07ae00f86154280ba99991a92d6d52d7b2c495b185d6bfe7ef1cd9920571",
+      "distance": 7,
+      "elapsed_seconds": 3.083161799999999,
+      "manifest_sha256": "9e544c25e8e4045a9587ee3941dfe2afb72ad9e28abd818aec319e9188cc591b",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_002_k7",
+      "run_id": 2,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1001a1733667e2dafa1bfdbd27fd4dc5912be9dd49ad026d8c97c868138cbfe9",
+      "distance": 1,
+      "elapsed_seconds": 3.0512258000000045,
+      "manifest_sha256": "0b9db12f06aa874c58269c55c127764f41868aeb66af5d846986cdf06573a182",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_003_k1",
+      "run_id": 3,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "8e7d30c3d3aa0078a12b454be06de6769eb15f941a4e999924e109b5d8292142",
+      "distance": 2,
+      "elapsed_seconds": 3.0389184,
+      "manifest_sha256": "26bc59219120cfc4060edea003c11b8baf407473a4b63b897a984cb0b4f4d2d5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_003_k2",
+      "run_id": 3,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e5b317869fa97f0d06d2047109330e50ed561d558a60c1f6eba9b48ac62f62fd",
+      "distance": 4,
+      "elapsed_seconds": 3.0107174999999984,
+      "manifest_sha256": "71643f0cd6f710ca1f86ccdc291186cc668cf9d75c91996aebfa5b358c616dd0",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_003_k4",
+      "run_id": 3,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "4abe661d4072138e7e26c87421dc77acaeec5ccb790aac36581b3b1db7ad1a87",
+      "distance": 7,
+      "elapsed_seconds": 3.013463399999999,
+      "manifest_sha256": "158674a13642de1a048264af1c84fab6a803297a7d54627220a92ec90a381d8e",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_003_k7",
+      "run_id": 3,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "cae2a870dd6a6280075b31fd78f3e4a86233d08242b8e068475f30fad54866f4",
+      "distance": 1,
+      "elapsed_seconds": 3.044970300000003,
+      "manifest_sha256": "b4dc42c1e54fa082fd90fde3a308586787d2713149e3a79a4a3b1c24c1087a65",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_004_k1",
+      "run_id": 4,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "408c28185e71fb5bee0a8423ac97be14c2b57c061c981184bf23b5d61cfca46c",
+      "distance": 2,
+      "elapsed_seconds": 3.0183137,
+      "manifest_sha256": "59a64453f2e34b32a01ccb7c914afa78293cffcea91aa788e73376e917402253",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_004_k2",
+      "run_id": 4,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f0bee17f8ecdff54cf63805f267eb9af58914eb79766c8cb80a45fef36e661cc",
+      "distance": 4,
+      "elapsed_seconds": 3.0012747999999974,
+      "manifest_sha256": "ead028db6e6b2e9bf3e455d9e5e8894799d030c1a8ce8b00465241d429aff0b5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_004_k4",
+      "run_id": 4,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "877ba81af3d4c05035b75048746dc30b34db7ec4129d8261526a6100df24e732",
+      "distance": 7,
+      "elapsed_seconds": 3.006367499999996,
+      "manifest_sha256": "8b75c94cb3fe2f8bd72c0d7d5e92dce3815f726035ab8ef27b8f395e3c2c86f4",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_004_k7",
+      "run_id": 4,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "14f11795598af62e5d2495ca38e0852790685301cdf4d6fd924081942adf3968",
+      "distance": 1,
+      "elapsed_seconds": 3.0459790000000027,
+      "manifest_sha256": "7eca0b746e4e915a1ab47f90485ec1993ad924c94e614bbf490263afc5aa483e",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_005_k1",
+      "run_id": 5,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "049c426d7dbffcfa1e7338f256c8bb4a38842448b24a4a3760d1ff174a79fb35",
+      "distance": 2,
+      "elapsed_seconds": 3.057566499999993,
+      "manifest_sha256": "a30549b88f9454ced42554dcf1612f862446a58bd77e333cb18af180f16e708c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_005_k2",
+      "run_id": 5,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "899fd5a780fb359bcf86377788360a2afe61251f5f770a5c19b59cd0a26e75ae",
+      "distance": 4,
+      "elapsed_seconds": 3.1273371999999995,
+      "manifest_sha256": "86d564869c65829ad1df2cc653bbeaeece59d578a4288bbc3ad8e83adafdf80a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_005_k4",
+      "run_id": 5,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f819bac3c24fcfa9bd9f4b903e25b74a461ff8739515abe3e8e879474a8f753b",
+      "distance": 7,
+      "elapsed_seconds": 3.018197399999991,
+      "manifest_sha256": "98ac45a70164daf5423d908cd7a72524afe99f992c8c6f561d90dae5a6580e08",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_005_k7",
+      "run_id": 5,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "40d6eab681f6ec5d8ff5a390ada53158f19834831bfcdf098c5c9311be8a2c96",
+      "distance": 1,
+      "elapsed_seconds": 3.0596558999999957,
+      "manifest_sha256": "57a5611b99f6ebe174da647568b27918774c66bd95541acff6132fc8efc87bf4",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_006_k1",
+      "run_id": 6,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "15d8f99424b1ba9febd8aa5ffcb271131f6370e1dbe65bc9179f6de014200997",
+      "distance": 2,
+      "elapsed_seconds": 3.0111856999999986,
+      "manifest_sha256": "3688b0f8a1d13e1ae8985bc9ddb0e0d636a3cbaae74ff1c44efc3ae3f0fe9fad",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_006_k2",
+      "run_id": 6,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "ca9d67c0edb9105bd3b79bb37a09ccad91abc33bb278efc77c888a31f7f0ecbc",
+      "distance": 4,
+      "elapsed_seconds": 3.0056128000000086,
+      "manifest_sha256": "ca8ee8363f2197a7dc2d24b3ed0e404eba262afd8c431b0b6ea1495038fa1cc6",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_006_k4",
+      "run_id": 6,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "8b9532441d498045b88e7667c3ffd7125ab8bc7f8c058059ee5dbfc6a4b81be3",
+      "distance": 7,
+      "elapsed_seconds": 3.0170791000000037,
+      "manifest_sha256": "856d26e6a1245a4b8826384c9ea44a8504e9d66c774fa38ea13442ba864707d5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_006_k7",
+      "run_id": 6,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "07bdf16b972a3a27cca3d8fd9836f85138dd7d5b7ff9f2c96ba3b8fd576d5e32",
+      "distance": 1,
+      "elapsed_seconds": 3.0058010000000053,
+      "manifest_sha256": "358c3605d7aa4be00e8e356490462718e142a2b7260ff3828e7c9ab529ef1cc0",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_007_k1",
+      "run_id": 7,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "fb6d72541859b5c5b35b8308ebf1d537558b1f62142f5d511e251a893c282aa7",
+      "distance": 2,
+      "elapsed_seconds": 3.041138200000006,
+      "manifest_sha256": "46ee949b175bd2fc9b1667a77406a5deeb41cd68b1b139fd09b242f524cf422b",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_007_k2",
+      "run_id": 7,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "bc7ba9b9aa69fea580515e8c10369a0d7341dd0bce45ab5750d9ded5ebf438f4",
+      "distance": 4,
+      "elapsed_seconds": 3.0523297000000014,
+      "manifest_sha256": "093d2b436c0f509402076dd56476072109d0d44ec8d8419893a53f3a86192679",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_007_k4",
+      "run_id": 7,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "36111a61cd51f0238a60b676213ff0ec92c55493ab31f8caeacb1d6d87e5e986",
+      "distance": 7,
+      "elapsed_seconds": 3.0391467999999975,
+      "manifest_sha256": "0fd94a5c1422ba7b008eceb969d3283218fc4cc7209817bf2934d4ed0feb0e66",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_007_k7",
+      "run_id": 7,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b4f170b08dde5fbae2cf38626f62416547b73978affb34c8119dc67e0f67551e",
+      "distance": 1,
+      "elapsed_seconds": 3.035608400000001,
+      "manifest_sha256": "c917e2153dca38c86f6a561cb87cbe102b7b2b8486e5127af0de4d01556f579c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_008_k1",
+      "run_id": 8,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "2292b6edc28b539da1369d01da8dcbcf1709d00d63ceb692f0aefba557cd200f",
+      "distance": 2,
+      "elapsed_seconds": 3.04498319999999,
+      "manifest_sha256": "50597447f722133c2aa8799350594b7ba37166c34435a247dca5966434b243b2",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_008_k2",
+      "run_id": 8,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "5131cf9abe9831a772f201ab9ecaa0ccd88e18aa2bd347ecd1df61399542f393",
+      "distance": 4,
+      "elapsed_seconds": 3.0573769000000084,
+      "manifest_sha256": "60ce4eace4b00092efaac612e93ac382240089081baa920b1274a194ca129647",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_008_k4",
+      "run_id": 8,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "dd1e69d4560c3807b9555336160bc161ec753b56f923a428f5c0e7a0501063d3",
+      "distance": 7,
+      "elapsed_seconds": 3.055348600000002,
+      "manifest_sha256": "638a0f104a9c4519743a7cd5fdc8f9d7bda1105308e7c4e2df0b500b54dfbb02",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_008_k7",
+      "run_id": 8,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b49dc92ac36de28946627694da959bae493c83b7570fee6e48b6b4e073b04d1c",
+      "distance": 1,
+      "elapsed_seconds": 3.0271340000000038,
+      "manifest_sha256": "a62d6de7143cc0ce54055b618daf8519b2355691d2af25f72623fec074b3a3d1",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_009_k1",
+      "run_id": 9,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "fa3a06b87fa6132cc6030f1b46ba58c8aa42e51ad98850b354377f17a2f13538",
+      "distance": 2,
+      "elapsed_seconds": 3.017000500000009,
+      "manifest_sha256": "1e82935d65bfa0aca7414c203a454c7ba313a967de9d4b72d592125b0c58c9b5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_009_k2",
+      "run_id": 9,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "a6731f66c6e9c3799b1e3db37346368b453afd356fa840741e2dd7cf2a01e7f2",
+      "distance": 4,
+      "elapsed_seconds": 3.0240493000000015,
+      "manifest_sha256": "ba6e9bcdf43ea83da3e23072e9224b9179a6c2679e3c3c606b653d92ebdf9b31",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_009_k4",
+      "run_id": 9,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b491dd1c7f50bd6b904582c04114133b390c1442dc30756396da06ed5b9d42b6",
+      "distance": 7,
+      "elapsed_seconds": 3.025704300000001,
+      "manifest_sha256": "633220525b777c213660be5dd3778ea943e079404f044e576ed0303a7bb2c039",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_009_k7",
+      "run_id": 9,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "3b7b9fdbdfe84260051d5a41846b49bbf7c2240a59dca887fbd88f25cdcd5995",
+      "distance": 1,
+      "elapsed_seconds": 3.0313387000000063,
+      "manifest_sha256": "bacce373c8e7fb938544504f0d8507ffa66cd434b20728db5a8dd783dd065f2a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_010_k1",
+      "run_id": 10,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "28f2a0fdb8c8a52e024409b89bedbf83f7f4aa0154ead64a01c1c88d4a408d0a",
+      "distance": 2,
+      "elapsed_seconds": 3.049797699999999,
+      "manifest_sha256": "bb21d5b58fd4ff360e2a78d6de05e0d5eeb77d1f62224c511513c00d13b980f0",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_010_k2",
+      "run_id": 10,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f1fa6177ad1b604d8fd2cde0dcace8f75229d688fdf20342bcafc9066ad70ef1",
+      "distance": 4,
+      "elapsed_seconds": 3.0667693999999983,
+      "manifest_sha256": "d9b54b288f3b5219a18bfbd0eb009850371a8971a44290d64202f12b412684f1",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_010_k4",
+      "run_id": 10,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "606be2a70f8eb3d864dc142469e66eab32d474c050c2583d7d4c6094b8dddcd6",
+      "distance": 7,
+      "elapsed_seconds": 3.0630021999999997,
+      "manifest_sha256": "22d5000f595d13acb6a8b26a548c425a9e4d56b35ef9887d36f4d56d8069e920",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_010_k7",
+      "run_id": 10,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e584d5cf089fc884d5b01bc7eb9ff7d0c5b6946114ee54ece86e7acb53af9c7b",
+      "distance": 1,
+      "elapsed_seconds": 3.054987600000004,
+      "manifest_sha256": "94352b1919694fa32dbf7c569d3b7702afae541f0cc1d8730243c8a1f40f39db",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_011_k1",
+      "run_id": 11,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "5f188f08f2997338e9e37b1ab7249ca345205932ab6ac190128fe1aad1b51c42",
+      "distance": 2,
+      "elapsed_seconds": 3.0269851000000187,
+      "manifest_sha256": "cb0bf03b71007e6ed18016383352fbc100898cbcada9a602dfb7b142cfa348e3",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_011_k2",
+      "run_id": 11,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e3d674769de6504aa1d77649958897c18f10896a629c0ef2f629ca11ed984eab",
+      "distance": 4,
+      "elapsed_seconds": 3.033667600000001,
+      "manifest_sha256": "b5af69d6eb5e531e9f482382fe2a85664a59d50e01b81a8b116c3bd9c2fd947f",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_011_k4",
+      "run_id": 11,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b32824cceaf208fd19d1735065fd2844ae2d5e0913b3d68aa167e8492078ce1f",
+      "distance": 7,
+      "elapsed_seconds": 3.033202899999992,
+      "manifest_sha256": "01e3f933aa92a8ee71723b10f04666f7f58959cb566b1c1aba51ba5a7061b06a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_011_k7",
+      "run_id": 11,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e4d77fb731e97056b039bb83440916633d8b2720e5fba1813424094bbe0f19b3",
+      "distance": 1,
+      "elapsed_seconds": 3.0474563999999873,
+      "manifest_sha256": "7cabaf3f84018cfed06cecf07b4a6121434c55b2866174cd6bcfd10735f1be58",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_012_k1",
+      "run_id": 12,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "64c6aeb9e4104a9044535d43ee83621de73dd19fec02f21830f3478205c90c74",
+      "distance": 2,
+      "elapsed_seconds": 3.0372171000000208,
+      "manifest_sha256": "e44f2d15e5c039ecc27967d70834408f7e00ac53bf17fb1e53219df3005b5b5a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_012_k2",
+      "run_id": 12,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "a709ae9435de61c0d7452cfc9c5efd820fe207b113fc89e9701e36999d055ae0",
+      "distance": 4,
+      "elapsed_seconds": 3.1351748000000157,
+      "manifest_sha256": "b17d7fe22195ce255191ec8c3a023ed427cffab515b5839c912786813580c2b4",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_012_k4",
+      "run_id": 12,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1896357f1b771484d7381ce443bf4a3176fcbbc944356fcc79389d6eb6940b33",
+      "distance": 7,
+      "elapsed_seconds": 3.2117997000000003,
+      "manifest_sha256": "5dc6745c6e262c75a71b26fdb8ca9d935f3263aa17d9c79562b994e321d8647c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_012_k7",
+      "run_id": 12,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "528608d92be1829d5043e426b1e76ecd66e35f0e96970aa73c01b3ef1002fea3",
+      "distance": 1,
+      "elapsed_seconds": 3.0085094000000083,
+      "manifest_sha256": "a91b42d692e86ef7ea88373999d3ba47280f59fb5f6abbaff35a394253983e8d",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_013_k1",
+      "run_id": 13,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "743978f5686ba90be39bdf892d08bd240b546c6f9bdbf6b3ab1f2531dcda55b9",
+      "distance": 2,
+      "elapsed_seconds": 3.0484207000000083,
+      "manifest_sha256": "36fec7df6962db9f2c7d13f012f7ea54ee481bc4b43e7d2015ca48f52be0f666",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_013_k2",
+      "run_id": 13,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "be9de27447a1aca32549a01e916c6a978f679d9b0aeef77f2d8cf97e3a3d8f40",
+      "distance": 4,
+      "elapsed_seconds": 3.0858856000000117,
+      "manifest_sha256": "0548df8d52435400415d0f986d1cea5d1a1c3b79e2293f0b066cc885b8f7df9b",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_013_k4",
+      "run_id": 13,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e25a71823d34636cc693423733f993158ce22a5da9b30163cac5c65646463f49",
+      "distance": 7,
+      "elapsed_seconds": 3.027649999999994,
+      "manifest_sha256": "0079960d09a00ecbef04e499c648690dadc973a652c8c48167fa67f61442f009",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_013_k7",
+      "run_id": 13,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "08745f8d11e4cf3b2efd451c39424db2f4c025b124f7646d616c9433f35536b1",
+      "distance": 1,
+      "elapsed_seconds": 3.021434499999998,
+      "manifest_sha256": "afd57856fd77e913db9e36741f25d71f07f92c560b762bef2b63e8711a1fc0fa",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_014_k1",
+      "run_id": 14,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "55871dead41463a6678ba9610b438425572185d2d0c2d48cfeb33853212829a2",
+      "distance": 2,
+      "elapsed_seconds": 3.0514048999999943,
+      "manifest_sha256": "f1abee47bdbc3439d612bef39dc588a3780efb5c6973e2aca03d96942fe1f4c9",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_014_k2",
+      "run_id": 14,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "c2c1329f8a6b004a1154298bf5cf7ca1b083b3fbf56f1110845c60e11a4cfb80",
+      "distance": 4,
+      "elapsed_seconds": 3.198416299999991,
+      "manifest_sha256": "0ab3b6a4815d0a33ff171708867808c55db9bde5c153ebde0f2ee2ca3464e3a0",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_014_k4",
+      "run_id": 14,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "6a39bf8e075683d70de6e70df1a656759b9664ed90d4bbb6db8d6990d18b18bb",
+      "distance": 7,
+      "elapsed_seconds": 2.989884100000012,
+      "manifest_sha256": "4bca6c7db64c341dd14bc29791cd13ca39ac42bbe0821769e5e0f4231a18be15",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_014_k7",
+      "run_id": 14,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "fd74e6966a8f446fdb89bd31b371b903b6a2be4b6c83cda2b5019683c8480e0f",
+      "distance": 1,
+      "elapsed_seconds": 3.0900029000000018,
+      "manifest_sha256": "0004bcb06c48ab880554b1244437e6df85f74f70e9c08573656be89d4203c21d",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_015_k1",
+      "run_id": 15,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "abee8a27d4be3815a04fc1b84e88a53e6f4181c4ab9f969b796a34c0c26e9614",
+      "distance": 2,
+      "elapsed_seconds": 3.0694997999999885,
+      "manifest_sha256": "ac3bf82a7ca09759546590a3af66269cb11cbcd5f835d40746f5d3c56ebbc331",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_015_k2",
+      "run_id": 15,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "786e4cf34816d4bd72aa1345c4d2dc55760e0d67a5a042e9c0f4536dd0eaa5f4",
+      "distance": 4,
+      "elapsed_seconds": 3.0093636000000004,
+      "manifest_sha256": "81bcac50a2b50797b584e94963746b6ee04551c190d91993bef932831edee517",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_015_k4",
+      "run_id": 15,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "4b96ae82319d40d91a64c93ac1f461977c667026fd0616c02b3443d74cac8507",
+      "distance": 7,
+      "elapsed_seconds": 3.1791510999999844,
+      "manifest_sha256": "74a9703ba4505430bf318d3d8985e1e1ede12f3a0378eb38b55aa43f984ec00d",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_015_k7",
+      "run_id": 15,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1cb71053c48905d91c4d6148ba0fedcf67c4da008f101ffc26b4d28341258618",
+      "distance": 1,
+      "elapsed_seconds": 3.0621879000000263,
+      "manifest_sha256": "4cd71845273fd52b2ef3379cfb9315476cf6b02b661c48a5fbac95c577faf49c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_016_k1",
+      "run_id": 16,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "7354195e07f35d82e841f19786b4b75ac053398f3851ff1178167add25950ef1",
+      "distance": 2,
+      "elapsed_seconds": 3.0931348999999955,
+      "manifest_sha256": "89fdb05a66a5f0c58b3822c2a1930a66e38a3c92fee6795ced06c1c4c543ddfd",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_016_k2",
+      "run_id": 16,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "8ce4fdfe383b66568193885e9bc38c79e880e883e945f0862a48426c7067e0f2",
+      "distance": 4,
+      "elapsed_seconds": 3.4349626000000058,
+      "manifest_sha256": "143c05a03b9568b043c8b20f77bd9b9598a1b6b4c7bae563ab22b66fb1c98bbc",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_016_k4",
+      "run_id": 16,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "510b0eefebf431b4425f0c221cd4fd8a9cfa1fc4e744d0b490f9993d4c7ec520",
+      "distance": 7,
+      "elapsed_seconds": 2.9662375999999995,
+      "manifest_sha256": "ecffbcc10ff9bfdd47e64fdfb8ba82c00acb28199dc9d6d29a4190ffb3fd6276",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_016_k7",
+      "run_id": 16,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "adaba2c48e69828437b4fb7b80b76b542809e47fa49e0e9e86da69eecaba7426",
+      "distance": 1,
+      "elapsed_seconds": 3.0269528999999977,
+      "manifest_sha256": "983e54a818c5db7b482844536af7ffbd0809048725a55ddebe9e77eddbeecf54",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_017_k1",
+      "run_id": 17,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f0fa22e81ff42af6fdee5549bfab4adeff4add93eee4a29e3b3bd049c75de3f0",
+      "distance": 2,
+      "elapsed_seconds": 3.0624396999999988,
+      "manifest_sha256": "2de7ca7de0d65f96e17c4fe79bd4832e25774d7fa87fcb543fd9064195f62d10",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_017_k2",
+      "run_id": 17,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "05365a928d9c21f3a855c1c21b1c1f9c1dc394d3a7dddb3769c460fc5de6f706",
+      "distance": 4,
+      "elapsed_seconds": 3.08839660000001,
+      "manifest_sha256": "2d566f9cb3fa81d97b85ede551b2d5c734027f5acfb6d826734f62c54b5db16a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_017_k4",
+      "run_id": 17,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "50e46edd08887c7a127d3fb0d4bad25533ca6d6a4fe99b830bec4fb5ab8cfb94",
+      "distance": 7,
+      "elapsed_seconds": 3.0796335,
+      "manifest_sha256": "2ee9e92d959d19a7c2eb8288af35e2c3160717e90a365706c0c794f0d008f14f",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_017_k7",
+      "run_id": 17,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "081e54f67ed01639de9dfbf0cb023d355dfbd0ed83f878667e691f19e85ba0d4",
+      "distance": 1,
+      "elapsed_seconds": 3.059741300000013,
+      "manifest_sha256": "4b6281bb428d14f0060840b107f5b01f8bad025d2e93d5aaf467dd14b507cfc3",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_018_k1",
+      "run_id": 18,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "803aa56fa988b29d6133ad078015e1f771c0b5fa615881771b1ed07b8ff66ce4",
+      "distance": 2,
+      "elapsed_seconds": 3.0203556000000162,
+      "manifest_sha256": "b040f1de07f0ebb04bd3f2930d02a65b71049fd925c4595da5c8289561ffcac3",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_018_k2",
+      "run_id": 18,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "a395b7a28a9db3a2cfdd244b66973822589ec4cb7ce591d36dbf54edc5d6eacc",
+      "distance": 4,
+      "elapsed_seconds": 3.0265228000000093,
+      "manifest_sha256": "b6b59fc40230d5b8b8fc4b35ed6d76e255a0b82b8567d52792e08484e2272563",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_018_k4",
+      "run_id": 18,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "8ddb268a722d36e0e5331bffa2411f0614dd63c2bc571aaccaa9a1b7af8a81dc",
+      "distance": 7,
+      "elapsed_seconds": 3.034549300000009,
+      "manifest_sha256": "6d1bef2b345fe4a842019eb187cbd4ba034d2ff70368605edd3a96d7594446e9",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_018_k7",
+      "run_id": 18,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "bc3594d6ec30a935e6b687b260a5c3f5c2cc80e8e1c2c4f4f54f6d62867e39e0",
+      "distance": 1,
+      "elapsed_seconds": 3.0329308000000026,
+      "manifest_sha256": "802197dba76907c31306c897646d74905fabb4de5b2abf1423fbb1e9406237ad",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_019_k1",
+      "run_id": 19,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "c8db0ad379aa32e8359c970328d91414fe94f9160b69ae27a8617ee9b955dddb",
+      "distance": 2,
+      "elapsed_seconds": 3.0618941000000177,
+      "manifest_sha256": "dd55b1e85332c848595cecc41984d7a45240d7776ea944ff3d1b3ba15cddb29c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_019_k2",
+      "run_id": 19,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "2fe5811f19afe38273677269e7303fc5c46407aad81862777f8a7ce0fda97ccc",
+      "distance": 4,
+      "elapsed_seconds": 3.0284026999999867,
+      "manifest_sha256": "f53131486d56fa56241379194c100b0632b7673dc5465848018ecbd60a257cde",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_019_k4",
+      "run_id": 19,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "b3943d14952c3f0805c5f96a31150621d0dd60e657bf3f2b218fbf65b94f5510",
+      "distance": 7,
+      "elapsed_seconds": 3.193283799999989,
+      "manifest_sha256": "9f2942bd087dfa9e58b126baf5c9c6c6e87ea9a26c5970f18899d9587a1f2452",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_019_k7",
+      "run_id": 19,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "e807418fcb5c9fab264131167d938b1ac01f5fb55853939c71189ea7779ff90c",
+      "distance": 1,
+      "elapsed_seconds": 3.10262179999998,
+      "manifest_sha256": "230ca61c9003a696a24327f3e8325939be475749c702d4192479eaf97105510e",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_020_k1",
+      "run_id": 20,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "00bbf67d2c8be664cf1f30d22d3d288f482ae0443905e188bdc23ecd8b98fbc2",
+      "distance": 2,
+      "elapsed_seconds": 3.0782921999999644,
+      "manifest_sha256": "454bae7a1efe3cce27cc180847926b33e222096676969f77f7edbe544b7b5480",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_020_k2",
+      "run_id": 20,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "0e859e80fce12c0efbae1fe901becf3f3bfe5e90c08deacec54ce7443a8198df",
+      "distance": 4,
+      "elapsed_seconds": 3.1157649000000447,
+      "manifest_sha256": "b4a141cc0d2edcf1565da58f27086a0d571b6e32686de6f3c4ac5fd6d8213655",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_020_k4",
+      "run_id": 20,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "c2ec538a530e881821be20ea8e5bd8f685360222df4edea78ff84a8f4bf42977",
+      "distance": 7,
+      "elapsed_seconds": 3.05910259999996,
+      "manifest_sha256": "92088d3825f7a0104d7cd96e904db5d0c749dbf32aa51a4fbc0ee8e82e20f0f5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_020_k7",
+      "run_id": 20,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "2e4e9785b0322b872751bb5d5cbc0f0f6b52bbacb8d1900fb0c0f2f047d7da52",
+      "distance": 1,
+      "elapsed_seconds": 3.0470641999999657,
+      "manifest_sha256": "b28d98701908838f561fccf5b533183fa9069d63226640459bec37494a26a2d0",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_021_k1",
+      "run_id": 21,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "9ca70107e79c60bff088814c88d7b02614b0977da9bf081bc2357c2741ba419c",
+      "distance": 2,
+      "elapsed_seconds": 3.0630290000000286,
+      "manifest_sha256": "186f2563cc18a79c6afb42006bb9c5eb489b89497cf782415f49e7c9bffe4160",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_021_k2",
+      "run_id": 21,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "526f44d51d3fdd92f04c098371499ab78f910007379d963673f647661bffd3a2",
+      "distance": 4,
+      "elapsed_seconds": 3.040385199999946,
+      "manifest_sha256": "b9012fc27035e7c147034b0d73ab6300dd6c28a6cc81bd3c866d5fb8b1f5f80f",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_021_k4",
+      "run_id": 21,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "098b576d44b57044d05faa85ea679ecca90d95a975f1e96aea63739e4b6da6ec",
+      "distance": 7,
+      "elapsed_seconds": 3.046333000000004,
+      "manifest_sha256": "015afd00c04be3282f843a838893022268928822a67bc450e4cb330a339c6c6a",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_021_k7",
+      "run_id": 21,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "d2d06f593607443f50c56ea8405c1b83b3c5c6c672b9f48d973c57d9d336b02b",
+      "distance": 1,
+      "elapsed_seconds": 3.054815099999985,
+      "manifest_sha256": "93654b380f61f997aec741838ff61e0c4054d8465e9c8893da9b5f7fc6e64d09",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_022_k1",
+      "run_id": 22,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "a949ec1bb9f3cd99b217ec4731cc9f013818ed75683319dbb4015fb7a03f62e4",
+      "distance": 2,
+      "elapsed_seconds": 3.0464147999999796,
+      "manifest_sha256": "255ad544137d3cea50fefdde6f5ce865e2173f6cc387ae07543713fad6e5c106",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_022_k2",
+      "run_id": 22,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "55f7c6fd63e9f3d23cfe686cf602d86a5bca75ee97982970c27c485992ff9189",
+      "distance": 4,
+      "elapsed_seconds": 3.0171151000000123,
+      "manifest_sha256": "bafb87382090a6c9af647cd362927fed6cce1790af34be698c256438b326d381",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_022_k4",
+      "run_id": 22,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "5de259e17f91a08a76919f8c10b7fbd6aa348dccfa5e3354ecf87200f8d73137",
+      "distance": 7,
+      "elapsed_seconds": 3.026113500000008,
+      "manifest_sha256": "ad2aae431ff40a6b29fb558b4d41b5e89780bc59e334dd9a548b91d425c8ef72",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_022_k7",
+      "run_id": 22,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "ce212d6742bf92a4a66ebf11cc2b4e6d36d62172dfb69947d794564ebea2d63f",
+      "distance": 1,
+      "elapsed_seconds": 3.069757700000025,
+      "manifest_sha256": "21a375a860653f6bd8d480f14ccead1e1ab19ae2cea8db61c827f5a0d72770df",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_023_k1",
+      "run_id": 23,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1b39a88cfe6cde8b94c5871529ba204145b02f34bfeea4822727512884c8fd97",
+      "distance": 2,
+      "elapsed_seconds": 3.0530724999999848,
+      "manifest_sha256": "476d70ca830596e31bee2f8af9cd826c17ac81c8f0b8edfcdce951d1f8e03558",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_023_k2",
+      "run_id": 23,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "ea9eab82918b25d77ff3af6eb16b99c96bf683d92bc9361291ec80a32887b06d",
+      "distance": 4,
+      "elapsed_seconds": 3.044731399999989,
+      "manifest_sha256": "be2a1ede227cb7aebf55ad00e79310663bac8bed49e9945a1f3f556e67f94ec1",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_023_k4",
+      "run_id": 23,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1dc39671cc280b2a11a6c1c7d3f7a37926cca9129a723771ec240c57f8e2c655",
+      "distance": 7,
+      "elapsed_seconds": 2.9983124999999973,
+      "manifest_sha256": "dcb651dc93344e2c46b8430a09b639a32bbcd22241f9532eda59dbf12f2e7c61",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_023_k7",
+      "run_id": 23,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "878a788b199a36736eaf4304caf73c8cf1581dc454a6d16d04004f332adfeb4f",
+      "distance": 1,
+      "elapsed_seconds": 3.2016795000000116,
+      "manifest_sha256": "739c8f44e7e8c8eabd42f45de08465b717db07c40b333f75d0622dd79857e2a6",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_024_k1",
+      "run_id": 24,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "98fcd74576885296742db0d826368134304f0a29c71218714d5c4d4f11142245",
+      "distance": 2,
+      "elapsed_seconds": 3.0346117999999933,
+      "manifest_sha256": "618608be248ac2f8a61bfac9b92df308c90aa560d742b67a6fe5ea64c2d6cc2b",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_024_k2",
+      "run_id": 24,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f19f97813de679b33e86b69ee9972ef4a24961733d03623230aeed1732d60bf2",
+      "distance": 4,
+      "elapsed_seconds": 3.7062201999999616,
+      "manifest_sha256": "9293a008ecc4f639effe9282367c924f55d85090d0800c88514144eacac01477",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_024_k4",
+      "run_id": 24,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "47bfad2404b742613087f0fe7256f07e580b005c9272e44314b5a93be8701190",
+      "distance": 7,
+      "elapsed_seconds": 3.7596811999999886,
+      "manifest_sha256": "ccdf9d97ac95ba5837e42fa21070affd63ff94c2e22c3331ed95cf5a50950080",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_024_k7",
+      "run_id": 24,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "cbce947f4380666234ab53aa4ccfa5491fde834d83224182f00f2ba1df302fb4",
+      "distance": 1,
+      "elapsed_seconds": 3.1340503000000126,
+      "manifest_sha256": "27c3a467ae868991a288d7aa047c82ad97cfab2eab647d1930bf898c4d2d654c",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_025_k1",
+      "run_id": 25,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "ca2074fca592b0fcc3f25a24aa0ed72a83d1dc8da2553b0d21aa93318908750f",
+      "distance": 2,
+      "elapsed_seconds": 3.049147600000026,
+      "manifest_sha256": "b1c7ba6150fd9cb2f2fe6bf664e4a387ba6429dd07f323665c61069b364eadc7",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_025_k2",
+      "run_id": 25,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "0f9cf4a46dfa40d8d3d3638f84629c0dcebd25573e28807cdb3302f0ca195e28",
+      "distance": 4,
+      "elapsed_seconds": 3.223726000000056,
+      "manifest_sha256": "379326f7cd3788e29dc691630c9589ca267a57dd3cfc9e5d61a2d8c155a291d8",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_025_k4",
+      "run_id": 25,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "9ddd2692167832bd6673fd9f5bde6138759353f145459e3fb5bd6166555df469",
+      "distance": 7,
+      "elapsed_seconds": 3.0336118999999826,
+      "manifest_sha256": "2f6ce1cd2db6aaa3905dd5a43faab8e19e1e93dc8978eff569f66941659ddc83",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_025_k7",
+      "run_id": 25,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "55e8c4f43e238b6efd84b5388d858ce5b8099d45c263294045f64b645b3742a3",
+      "distance": 1,
+      "elapsed_seconds": 3.058287500000006,
+      "manifest_sha256": "cd53731ff4244bd2706c6b3c5b3908aa31df0d2ac37f8c80015b75f97d0f9939",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_026_k1",
+      "run_id": 26,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "f7cc45cfcd636bcd5007f1d132a0876aedec7751eacd027635277eb8e1ecefb0",
+      "distance": 2,
+      "elapsed_seconds": 3.0491486000000236,
+      "manifest_sha256": "3087ceee02aef0187699957cd8c3f83e92ecd80d35d28b3a2a5e9feff36391e1",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_026_k2",
+      "run_id": 26,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "5a726d34a8b38107a510c8a0f51c47d096850265e15d5c361e33e2e0086f4d9c",
+      "distance": 4,
+      "elapsed_seconds": 3.152645000000007,
+      "manifest_sha256": "7986b7d422e8687124b4e6dd98fddb331772ebabe21933bb4f9bc89b9448eb43",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_026_k4",
+      "run_id": 26,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "4dd97818fdad4fc9e10d2f549339d9ace082341dc133de29b9a9d1d9d7a76940",
+      "distance": 7,
+      "elapsed_seconds": 3.0800560000000132,
+      "manifest_sha256": "77bdec3aaeaba0a9323d5df48372634ff9f88a2442b2849a389540f0deb6cee5",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_026_k7",
+      "run_id": 26,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "47c04f3494f2d6aa1677b73c0150ad1f8e145ca46b38357665ef3b2b73782510",
+      "distance": 1,
+      "elapsed_seconds": 3.0668945000000463,
+      "manifest_sha256": "ac84703f07c7f55206e458da649d2213b15f3f6db5f60ef0b0b70644bef841da",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_027_k1",
+      "run_id": 27,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "d7770b214fd2691a28e76578826d8d2eb793545b79de6a35680f098f37bf4982",
+      "distance": 2,
+      "elapsed_seconds": 3.0793873999999732,
+      "manifest_sha256": "fad078ff80389aa8db8b0c18046483d57543a3c205752ba99809d93909072c46",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_027_k2",
+      "run_id": 27,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1cf30099f6880810ee482f6c082e7621aded19a26689359ebb398d3bf20307f7",
+      "distance": 4,
+      "elapsed_seconds": 3.0475911999999994,
+      "manifest_sha256": "7f2f3a4537ea437978f8a65f346f8f960b74f572f6afe4474a63224f25b74931",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_027_k4",
+      "run_id": 27,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "be97a98efc4a0bc54b2933e8f39802dcf6750833a83f7950afdc082d8f264778",
+      "distance": 7,
+      "elapsed_seconds": 3.045540599999981,
+      "manifest_sha256": "fea1b7c3003e84ccd62d30bc8910f4baea33425799974f3a183601da466dff68",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_027_k7",
+      "run_id": 27,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "76e21b11ddd62a0c899cead1588e6a224c033fd5c502e93ad6a5b00d8c350c82",
+      "distance": 1,
+      "elapsed_seconds": 3.1083355000000097,
+      "manifest_sha256": "fb154c7f0f364e8e32cfd09e7697823c662ccb0460758fa44f86c2e8256c57ac",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_028_k1",
+      "run_id": 28,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "ce5179cc8254aa0b5f54435b4d7abaf807354deb5a37cf9e2426d0ecd1d11cc2",
+      "distance": 2,
+      "elapsed_seconds": 3.0587302000000136,
+      "manifest_sha256": "ec82cd825eab6e953ea465c4bdaf8e7ab31d082dec2ff131443ac7d548ede04d",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_028_k2",
+      "run_id": 28,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "6473e641681639b411d2e5c64153ed1a8b89929e92412123ba3cc55cfcfaf127",
+      "distance": 4,
+      "elapsed_seconds": 3.0525056000000177,
+      "manifest_sha256": "f2753f19369118920a29dec7a20d918bee5998c139d681eb7e2936738b5ef254",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_028_k4",
+      "run_id": 28,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "a645136288b0e059dc4a70267c9aeb4aa7565555a6b383e7842f59390f3cbc27",
+      "distance": 7,
+      "elapsed_seconds": 3.0982418000000393,
+      "manifest_sha256": "a10b2296e2f1536899caca91a96ce99a7566c335a4070fa8845c928336bdd25d",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_028_k7",
+      "run_id": 28,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "54417fc7bf3dc8411edb2ba699a026b13f51f2375bc8c6ea4cd3c0e38592f062",
+      "distance": 1,
+      "elapsed_seconds": 3.033034799999996,
+      "manifest_sha256": "446657e030925a9f77ea4fcc734d8907212ac56d4beb58f64153cf3919486696",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_029_k1",
+      "run_id": 29,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "6aa933180aecdeee1ab1ca0de6ab8da734d4edd251def377fc67374d77315009",
+      "distance": 2,
+      "elapsed_seconds": 3.031963399999995,
+      "manifest_sha256": "dccf8eb07a0d0bf0467756d23e2f84ad19328b5a537f84446e01617d6cf40ace",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_029_k2",
+      "run_id": 29,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "1c90967f75d15ec111a9dda52b670a4f2939c3bd8a453e8a8075608b546fd3cb",
+      "distance": 4,
+      "elapsed_seconds": 3.0692315999999664,
+      "manifest_sha256": "8a3e1c90397269bcafb337f504cc6f0cc7fd5fbc619164d0fad2a8c333914bd9",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_029_k4",
+      "run_id": 29,
+      "status": "complete"
+    },
+    {
+      "completion_record_sha256": "4747239c67e9faca2a6a64cbf72aa187b6bf8fcb5aa804b787a429a7c8b9a11f",
+      "distance": 7,
+      "elapsed_seconds": 3.115983500000027,
+      "manifest_sha256": "280f272b732cba188cbfe95a4785752e651a8c689daff7044fc7c0d15bae68f1",
+      "producing_code_git_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+      "result_directory": "outputs\\cruxrnn_final_proposed_v1\\runs\\run_029_k7",
+      "run_id": 29,
+      "status": "complete"
+    }
+  ],
+  "verified_existing_cells": 0,
+  "wall_seconds": 381.34222079999995,
+  "working_tree_clean_before_execution": true
+}

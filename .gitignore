@@ -31,3 +31,4 @@ desktop.ini
 credentials.json
 secrets/
 /provenance/delivery_status.json
+/artifacts/cruxrnn_final_release.png
