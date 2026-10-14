@@ -112,7 +112,7 @@ The complete target sequence is supplied in the initial cue. These results descr
 
 ## Final commit and release provenance
 
-The results commit SHA will be recorded in one explicit follow-up documentation commit after results are committed. The release tag will identify the final documentation snapshot; a commit cannot contain its own hash.
+Results commit: `52bd5a160513d007ea3fc238ceedcd0c0caa31c7` (**Add CruxRNN confirmatory final experiment results**). This SHA is recorded in the explicitly separate follow-up documentation commit, along with `provenance/final_results_commit.json`. The follow-up adds only this provenance relationship and its receipt; the results commit cannot contain its own SHA. Release tag `v1.0-final-experiment` identifies the follow-up documentation snapshot. Resolve that snapshot's exact SHA with `git rev-parse v1.0-final-experiment^{}`.
 
 ## Full raw-data release asset
 

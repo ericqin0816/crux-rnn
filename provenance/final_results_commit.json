@@ -1,0 +1,14 @@
+{
+  "completed_pairs": 120,
+  "configuration_sha256": "26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006",
+  "excluded_pairs": 0,
+  "expected_pairs": 120,
+  "failed_pairs": 0,
+  "final_documentation_reference": "v1.0-final-experiment",
+  "pre_final_commit": "fa3b7c34496274569944b85c74d2c6c4cd443fe4",
+  "producing_execution_commit": "28a2b07bb40afcf7af9b907612e01ce722902bcc",
+  "project": "CruxRNN",
+  "recorded_at_utc": "2026-10-14T00:03:18.032823+00:00",
+  "relationship": "This receipt and the RUN_REPORT SHA are added by a documentation follow-up after the results commit. No commit claims to embed its own SHA.",
+  "results_commit": "52bd5a160513d007ea3fc238ceedcd0c0caa31c7"
+}
