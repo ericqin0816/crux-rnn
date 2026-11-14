@@ -8,3 +8,6 @@ configs/*.json -text whitespace=cr-at-eol
 results/** -text whitespace=cr-at-eol
 provenance/environment/** -text whitespace=cr-at-eol
 reports/history/** -text whitespace=cr-at-eol
+src/cruxrnn/*.py -text
+configs/v2/*.json -text whitespace=cr-at-eol
+results/v2/** -text whitespace=cr-at-eol
