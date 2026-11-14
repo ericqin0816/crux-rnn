@@ -11,3 +11,5 @@ reports/history/** -text whitespace=cr-at-eol
 src/cruxrnn/*.py -text
 configs/v2/*.json -text whitespace=cr-at-eol
 results/v2/** -text whitespace=cr-at-eol
+# Matplotlib emits multiline SVG paths with trailing spaces; preserve their hashes.
+results/v2/figures/*.svg -text whitespace=-blank-at-eol,cr-at-eol

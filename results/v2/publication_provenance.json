@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-11-14T21:29:46.949413+00:00",
+  "english_chinese_same_numeric_table": true,
+  "main_models": 2760,
+  "namespace": "cruxrnn_v2_main_20261114",
+  "report_source_sha256": "d5ca692171dec9fc61e2b6ba4c4083dc71b798e7cc5405bb8c226b687b0d9b60",
+  "reporting_git_commit": "6c44817d4266bb4ad62f7ce556a8fece79900edb",
+  "v1_pooled": false
+}

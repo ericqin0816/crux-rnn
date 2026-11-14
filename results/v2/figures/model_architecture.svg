@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="628.2pt" height="229.102125pt" viewBox="0 0 628.2 229.102125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-14T15:09:41.534948</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 229.102125 
+L 628.2 229.102125 
+L 628.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 24.409346 151.081996 
+L 127.665421 151.081996 
+Q 133.401869 151.081996 133.401869 144.643802 
+L 133.401869 102.795544 
+Q 133.401869 96.357351 127.665421 96.357351 
+L 24.409346 96.357351 
+Q 18.672897 96.357351 18.672897 102.795544 
+L 18.672897 144.643802 
+Q 18.672897 151.081996 24.409346 151.081996 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #e4eff5; stroke: #304b5b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 196.502804 151.081996 
+L 299.758879 151.081996 
+Q 305.495327 151.081996 305.495327 144.643802 
+L 305.495327 102.795544 
+Q 305.495327 96.357351 299.758879 96.357351 
+L 196.502804 96.357351 
+Q 190.766355 96.357351 190.766355 102.795544 
+L 190.766355 144.643802 
+Q 190.766355 151.081996 196.502804 151.081996 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #e4eff5; stroke: #304b5b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 368.596262 151.081996 
+L 471.852336 151.081996 
+Q 477.588785 151.081996 477.588785 144.643802 
+L 477.588785 102.795544 
+Q 477.588785 96.357351 471.852336 96.357351 
+L 368.596262 96.357351 
+Q 362.859813 96.357351 362.859813 102.795544 
+L 362.859813 144.643802 
+Q 362.859813 151.081996 368.596262 151.081996 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #e4eff5; stroke: #304b5b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 135.400733 124.041583 
+Q 164.950431 124.041583 193.382096 124.041583 
+" clip-path="url(#pc19a7481a3)" style="fill: none; stroke: #304b5b; stroke-linecap: round"/>
+    <path d="M 188.582096 121.641583 
+L 193.382096 124.041583 
+L 188.582096 126.441583 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #304b5b; stroke: #304b5b; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 307.494191 124.041583 
+Q 337.043889 124.041583 365.475554 124.041583 
+" clip-path="url(#pc19a7481a3)" style="fill: none; stroke: #304b5b; stroke-linecap: round"/>
+    <path d="M 360.675554 121.641583 
+L 365.475554 124.041583 
+L 360.675554 126.441583 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #304b5b; stroke: #304b5b; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 424.675089 146.330914 
+Q 334.178631 39.256326 244.403879 145.474507 
+" clip-path="url(#pc19a7481a3)" style="fill: none; stroke: #304b5b; stroke-linecap: round"/>
+    <path d="M 249.335343 143.357749 
+L 244.403879 145.474507 
+L 245.66935 140.259281 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #304b5b; stroke: #304b5b; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 209.046733 94.666552 
+Q 248.130728 33.800101 286.610621 93.725424 
+" clip-path="url(#pc19a7481a3)" style="fill: none; stroke: #304b5b; stroke-linecap: round"/>
+    <path d="M 286.036557 88.389653 
+L 286.610621 93.725424 
+L 281.997566 90.983214 
+z
+" clip-path="url(#pc19a7481a3)" style="fill: #304b5b; stroke: #304b5b; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(41.356133 120.880142)">Complete cue</text>
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(50.613164 132.077955)">7 features</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(209.515997 120.880142)">Recurrent state</text>
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(212.340997 132.077955)">h hidden units</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(383.649299 120.880142)">Linear readout</text>
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(391.079768 132.077955)">4 raw logits</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="339.914019" y="202.587544" transform="rotate(-0 339.914019 202.587544)">Linear 4→7 feedback; repeat for seven action outputs</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 9px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="248.130841" y="57.72819" transform="rotate(-0 248.130841 57.72819)">State resets for each example</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 12px 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="314.1" y="16.318125" transform="rotate(-0 314.1 16.318125)">Complete-cue decoding architecture · RNN / GRU / LSTM recurrence</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc19a7481a3">
+   <rect x="7.2" y="22.318125" width="613.8" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

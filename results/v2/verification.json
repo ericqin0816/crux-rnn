@@ -1,0 +1,16 @@
+{
+  "D_adapted_clones": 2760,
+  "all_completed_artifact_hashes_valid": true,
+  "completed_cells": 1260,
+  "config_sha256": "b7a975c1e3cd895ffddce160e314b231a724f9a13fbb511df81033986a4039d4",
+  "excluded_cells": 0,
+  "expected_cells": 1260,
+  "failure_records": 0,
+  "main_models": 2760,
+  "missing_cells": [],
+  "namespace": "cruxrnn_v2_main_20261114",
+  "producing_git_commits": [
+    "47b32340142cce8cc1dd46056d0283d43c356943"
+  ],
+  "verified_at_utc": "2026-11-14T21:09:01.981373+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-11-14T21:09:47.756958+00:00",
+  "data_namespace": "cruxrnn_v2_main_20261114",
+  "data_source": "verified v2 outputs only",
+  "figures": {
+    "architecture_comparison.png": "78e5573b62d8b7d2989d172f0bbc6e70ae0bf26ee1f198f9b3837edeef705df9",
+    "architecture_comparison.svg": "f2c74710230dd49b765eb9169c3c4c6c64acf9adeb9bae96005ede41195a81ef",
+    "capacity_sensitivity.png": "4ac959089feadb85a65606caa2ba73b9645312459e24d821ac1a19fc8b3e6a57",
+    "capacity_sensitivity.svg": "a297694e8aeeabcecb6377d749666ca97a240567af9682bf498ba848714f8b5c",
+    "experimental_design.png": "0dab3cd92828c08e60d8e07ec7dac950fbad28bd92a79141c4d431fdc76fd4be",
+    "experimental_design.svg": "d736e8a8b8ff320324ffb4e62ca2d16edc06c1186b48f90a3d64d52f5c89dfd7",
+    "forgetting_interference.png": "b2f8edd44d1a1b5c8790c2dabb47acd53be85a16976d0ba01d02061daef124d0",
+    "forgetting_interference.svg": "91695369ca623ec8fa45fee303490e0054c4bb9aeab0a931cbc78c248a3022c3",
+    "learning_curves.png": "d31072191e575c25bfeaf3ac7298744ccec7db5a4296b291551f729886f6bb66",
+    "learning_curves.svg": "66a9334e4529acf4ae7ff3c3b3b85cc6463ea0c86e06733e1db878a191800932",
+    "main_accuracy.png": "1027213dbc9d3b350c035e51b53343be6e2cb534e9932c02654de6d78e08ed87",
+    "main_accuracy.svg": "bdc38492947099e47dc63793cbff4a98bd924c9b99edb0d65d14b48e5152d416",
+    "model_architecture.png": "15c6bf6dd4179e937778de9f3620bd3a1c6eb71bea8661951f2c46f977f9768a",
+    "model_architecture.svg": "4f9b12c175f46fc0d086a454aad483987e759b1b399f69ef18d41751d3233cbf",
+    "noise_robustness.png": "edf232e4ae47380e59552e5ce8f95a5621f97f9b5856c8f7347cc9a2d342af77",
+    "noise_robustness.svg": "5a69c280bae5c641acc577a378a599c90245fb51a62732a887ebf63782ec765b",
+    "paired_effects.png": "5d9604cc263884d904eb513131e50236222d91cfa398c293afbdc1e8ca208db5",
+    "paired_effects.svg": "811c06b359fbaee1a04ee60fc2d1bad1649fc2024818638cfb6216bcd42f22a9",
+    "practice_granularity.png": "a73afa99bb1aee58d40919a0ab1e1c134968f30a43d5e12ccb70cf9582901f6c",
+    "practice_granularity.svg": "5b490f30a658e26cb37ce3c5f49ad70c4fbc3b4531429abcb3529e390c1293dc",
+    "practice_schedules.png": "e056f705504e9af299bd59cab7e6914c58b7e8465e5ac37e9a15e4b020d04c14",
+    "practice_schedules.svg": "98e34b74858c1961659dad1443e2c6685887eb5b6dbf402bb9f14ad4b65ce170",
+    "sequence_similarity.png": "a1c22eb8733140c2ae8d71f6f933d70d33fac9fcf358f2f0fcacafedc00f6fc1",
+    "sequence_similarity.svg": "f4ef268338205b78f34d892bec801c041823c1aa258853c28fa3f855223eef18"
+  },
+  "producing_git_commit": "11fa47c910a1010f625dfc6092d5421276686a90",
+  "visualization_source_sha256": "ccb6143639ba4e34d7c51d3d154743a19147a131a1bb63feaa62a0f6f161538b"
+}

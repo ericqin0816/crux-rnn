@@ -101,6 +101,22 @@ public archive. V2 does not publish a final release or move the v1 tag.
 Source-only Git downloads provide compact outputs and regeneration commands,
 not an implied copy of every historical checkpoint.
 
+The completed archive is `artifacts/cruxrnn-v2-research-data.zip`:
+1,281,133,680 bytes, 18,178 members, all CRC-verified, with an internal
+per-payload SHA-256 manifest. Its SHA-256 is
+`6f38dd66d63bc637284452f8290c5cd666b977c4bf632fd92bf90b52e8fac45d`.
+The tracked [receipt](../artifacts/v2_archive_receipt.json) identifies the
+namespace and counts. Extract it into the review-branch repository root to
+restore `outputs/v2/main/`; then run `cruxrnn verify`, `analyze` and `figures`
+with `--config configs/v2/main.json`. `scripts/v2_archive.py` intentionally
+refuses to replace an existing archive. The config's raw-file SHA-256 is
+`cb66c371a2b377273490a3421cd8bff2bf267d3c7e6a590c6d2750b9df621693`;
+the canonical parsed-configuration hash is a separate recorded quantity.
+
+Figure interpretation and precise uncertainty definitions are in the
+[figure captions](figures.md). The independent publication check can be run
+with `python scripts/v2_validate_publication.py` after restoring the raw data.
+
 Optional `--device cuda --workers 1` requires a compatible CUDA PyTorch build.
 The CLI enables deterministic cuBLAS workspace settings, but GPU execution was
 not tested on this CPU-only setup and need not be numerically identical.

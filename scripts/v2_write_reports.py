@@ -692,8 +692,13 @@ behavioral measurements. These require new plans rather than post hoc claims.
 Compact outputs: `results/v2/`; full local arrays/checkpoints/bootstrap arrays:
 `outputs/v2/main/`. Twelve original PNG/SVG figure types are under
 `results/v2/figures/`; learning bands are ±SE, paired intervals are bootstrap
-95% CIs. The offline viewer reads only exported actual tables and recorded
-families; schedule illustrations are separately labeled.
+95% CIs. [Figure captions](../docs/figures.md) identify samples, endpoints and
+uncertainty. The offline viewer reads only exported actual tables and recorded
+families; schedule illustrations are separately labeled. Full raw-data archive
+integrity and extraction instructions are in the
+[reproduction guide](../docs/reproducibility.md) and
+[archive receipt](../artifacts/v2_archive_receipt.json). The archive remains
+local pending owner review; no final v2 release has been published.
 
 Song, Y., Kim, H., & Kim, T. (2026). A minimal recurrent neural network models
 the robustness of interleaved practice on motor sequence learning. Scientific

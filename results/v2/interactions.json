@@ -1,0 +1,47 @@
+{
+  "all_distances": {
+    "bootstrap_samples": 10000,
+    "bootstrap_unit": "whole replicate IDs",
+    "categorical_statistic": 944.301054162618,
+    "ci_high": 6.161862244897958,
+    "ci_low": 5.3859124149659845,
+    "distances": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "leave_one_out_slope_max": 5.8236446093588965,
+    "leave_one_out_slope_min": 5.724111866969012,
+    "n": 100,
+    "p_categorical_holm": 0.0008999100089991002,
+    "p_categorical_interaction": 9.999000099990002e-05,
+    "p_slope_holm": 0.0008999100089991002,
+    "p_slope_sign_flip": 9.999000099990002e-05,
+    "slope_pp_per_hamming": 5.770867346938777
+  },
+  "original_four": {
+    "bootstrap_samples": 10000,
+    "bootstrap_unit": "whole replicate IDs",
+    "categorical_statistic": 660.685711791383,
+    "ci_high": 6.057609693877553,
+    "ci_low": 5.1313939909297055,
+    "distances": [
+      1.0,
+      2.0,
+      4.0,
+      7.0
+    ],
+    "leave_one_out_slope_max": 5.657310062071968,
+    "leave_one_out_slope_min": 5.541892851416661,
+    "n": 100,
+    "p_categorical_holm": 0.0005999400059994001,
+    "p_categorical_interaction": 9.999000099990002e-05,
+    "p_slope_holm": 0.0005999400059994001,
+    "p_slope_sign_flip": 9.999000099990002e-05,
+    "slope_pp_per_hamming": 5.600226757369615
+  }
+}
