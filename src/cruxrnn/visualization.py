@@ -2,6 +2,7 @@
 
 import json
 import shutil
+import subprocess
 from pathlib import Path
 
 import matplotlib
@@ -381,6 +382,9 @@ def figures(config: ExperimentConfig) -> None:
     write_json(
         directory / "figure_manifest.json",
         {
+            "producing_git_commit": subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], text=True
+            ).strip(),
             "created_at_utc": utc_now(),
             "visualization_source_sha256": file_hash(__file__),
             "data_namespace": config.namespace,

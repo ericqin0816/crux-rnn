@@ -4,6 +4,7 @@ import gzip
 import json
 import math
 import shutil
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -369,6 +370,10 @@ def analyze(config: ExperimentConfig) -> None:
     write_json(
         target / "analysis_provenance.json",
         {
+            "producing_git_commit": subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], text=True
+            ).strip(),
+            "config_sha256": canonical_hash(config.as_dict()),
             "completed_at_utc": utc_now(),
             "namespace": config.namespace,
             "statistics_source_sha256": file_hash(Path(__file__).with_name("statistics.py")),
