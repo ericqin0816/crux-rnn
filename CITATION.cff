@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Cite the exact CruxRNN version used and acknowledge Song et al. (2026). v2 is a review candidate."
+title: "CruxRNN: sequence similarity, practice scheduling and interference in recurrent neural networks"
+type: software
+version: 2.0.0rc1
+authors:
+  - name: ericqin0816
+repository-code: https://github.com/ericqin0816/crux-rnn
+url: https://github.com/ericqin0816/crux-rnn
+license: MIT
+abstract: "An AI-assisted computational replication and controlled extension studying paired practice schedules in artificial recurrent networks. It is not a human-subject study or a published CruxRNN paper."
+references:
+  - type: article
+    title: "A minimal recurrent neural network models the robustness of interleaved practice on motor sequence learning"
+    authors:
+      - family-names: Song
+        given-names: Youngjo
+      - family-names: Kim
+        given-names: Hakjoo
+      - family-names: Kim
+        given-names: Taewon
+    year: 2026
+    journal: Scientific Reports
+    volume: 16
+    start: 10068
+    doi: 10.1038/s41598-026-40162-w
