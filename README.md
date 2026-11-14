@@ -1,162 +1,127 @@
-# CruxRNN
+<div align="center">
+<img src="docs/assets/cruxrnn-logo.svg" width="112" alt="CruxRNN climbing and recurrence logo">
+<h1>CruxRNN</h1>
+<p><strong>Exploring how sequence similarity shapes learning, memory, and interference in recurrent neural networks.</strong></p>
+<a href="https://github.com/ericqin0816/crux-rnn/actions/workflows/ci.yml"><img src="https://github.com/ericqin0816/crux-rnn/actions/workflows/ci.yml/badge.svg?branch=v2-research-upgrade" alt="CI"></a>
+<img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white" alt="Python 3.8 and newer">
+<img src="https://img.shields.io/badge/PyTorch-1.13%2B-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch 1.13 and newer">
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license scope in NOTICE"></a>
+<p><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a></p>
+</div>
 
-**Sequence Similarity, Practice Scheduling, and Interference in a Minimal Recurrent Neural Network**
+**v2 review candidate.** The upgrade is on a separate branch; v1.0 remains
+preserved. Merge and final v2 release await owner review.
 
-CruxRNN is a computational replication and controlled extension of Song, Kim, and Kim (2026). It tests whether similarity between seven-action sequences changes the relative effects of blocked and interleaved practice in a small Elman recurrent neural network.
+CruxRNN is an independent computational replication and controlled extension
+of [Song, Kim & Kim (2026)](https://doi.org/10.1038/s41598-026-40162-w).
+It asks how similarity between seven-action patterns changes the relative
+effects of concentrated blocked practice and shuffled interleaved practice.
+Climbing motivated the question; these are artificial-network simulations,
+with no human participants or climbing measurements.
 
-The project was motivated by questions about repetition, route similarity, and motor learning in speed climbing, but all experiments are synthetic neural-network simulations and do not use human participants or biological recordings.
+![Measured v2 accuracy across all seven distances](results/v2/figures/main_accuracy.png)
 
-**Current status: approved confirmatory final experiment complete.** All 120 fresh paired cells / 240 main models are verified, with zero failures or exclusions. Source reproduction (100 pairs), smoke (4) and pilot (20) remain separate. The earlier 120-pair exploratory study has incomplete producing-SHA/timestamp provenance and is excluded from these final results; [prior execution](reports/prior_execution.md) discloses that history.
+## Measured results
 
-Start with [RUN_REPORT.md](RUN_REPORT.md), the [student notebook](notebooks/walkthrough.ipynb), and [confirmatory results](reports/results.md). Code, tables, figures and provenance are published in [ericqin0816/crux-rnn](https://github.com/ericqin0816/crux-rnn). Release tag: `v1.0-final-experiment`.
+**100 pairs at each k=1–7: 1400 main schedule models.** Smaller matched
+extensions bring the completed scientific total to **2760 main models**;
+D-adapted clones are counted separately. No v1, smoke or pilot data are pooled.
+The original-distance primary endpoint is fresh-noisy action accuracy before D:
 
-## 1. Research question
+| k | Pairs | Blocked % | IP % | IP−blocked pp | CI low | CI high |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 100 | 87.448 | 89.304 | 1.857 | 0.651 | 2.976 |
+| 2 | 100 | 79.203 | 84.897 | 5.693 | 4.050 | 7.377 |
+| 4 | 100 | 60.508 | 77.634 | 17.126 | 15.023 | 19.283 |
+| 7 | 100 | 40.249 | 75.170 | 34.921 | 32.358 | 37.524 |
 
-How does sequence similarity change learning and interference under blocked versus interleaved practice in this minimal recurrent network?
+All seven pointwise intervals exclude zero. Primary distance tests passing Holm correction: 1, 2, 4, 7. Original-four slope: 5.600 pp per Hamming unit, 95% CI [5.131, 6.058], Holm p=0.0005999.
+IP has lower mean exact-sequence accuracy at k=3,4,5,6,7, despite any action-accuracy advantage. Statistics concern this model/generator, not human mechanisms.
+See the [full report](reports/v2_research_report.md) for all seven conditions,
+secondary outcomes, adjusted tests, effect sizes and sensitivity analyses.
 
-## 2. Motivation
+## Quick start
 
-Climbing supplies an analogy for repeating or alternating movement patterns. It supplies no measurements, biological evidence, or tested climbing-performance effects. The study asks a narrow computational question.
+Use an activated virtual environment; the tiny demo runs on CPU and is not a
+scientific result. [Installation and exact versions](docs/reproducibility.md).
 
-## 3. Original paper
+```bash
+git clone https://github.com/ericqin0816/crux-rnn.git
+cd crux-rnn
+git switch v2-research-upgrade
+python -m pip install -e ".[dev]"
+python -m unittest discover -s tests -p "test_v2*.py" -v
+cruxrnn demo --output outputs/my-demo
+```
 
-Song, Youngjo; Kim, Hakjoo; Kim, Taewon. [“A minimal recurrent neural network models the robustness of interleaved practice on motor sequence learning.”](https://doi.org/10.1038/s41598-026-40162-w) *Scientific Reports* 16, 10068 (2026). DOI: 10.1038/s41598-026-40162-w.
+The v2 suite supports modern PyTorch. The complete historical test suite and
+bitwise research reproduction use the separately documented Python 3.8.10 /
+PyTorch 1.13.1 CPU environment. Both CI jobs pass on their stated environments.
 
-## 4. Original repository and inspected commit
+## Method and extensions
 
-[YJ-0000/RNN_during_RP_and_IP](https://github.com/YJ-0000/RNN_during_RP_and_IP), exact commit `31f58bb6de90d1fffcb752c0b97afb7df51479a7`. The audit checkout is only in ignored `external/author_repo/`. No root LICENSE was found; author code and figures are not copied into CruxRNN. Model behavior is independently implemented.
+Within each pair, weights and noisy examples are identical; only presentation
+order changes. All three pairwise sequence distances equal k. Pretrain once,
+then train each schedule for 750 SGD updates and test on independently noisy
+held-out cues. Copies and action positions are not independent subjects.
 
-## 5. Source audit
+- RNN / GRU / LSTM, with parameter counts and approximate matching.
+- Fully blocked, 1000/100-example blocks, trial cycling and shuffled IP.
+- RNN capacities h=7,16,32,64; fresh cue-noise robustness.
+- A/B/C learning dynamics, exact-sequence scores and matched D interference.
 
-[Audit](reports/audit.md): Figure 2 says 10,000 pretraining trials versus Methods/code 1,000; uniqueness is not enforced; retention reuses training inputs; vulnerability uses only the last sequence; run-level random streams are unsaved; one learning-curve CI uses the wrong sample-count axis; and “epochs” denote batch updates. Source-exact mode retains these experimental limitations.
+[Methods](docs/methodology.md) · [Experiments](docs/experiments.md) ·
+[Statistical plan](docs/statistical_analysis.md) · [Code audit](docs/code_audit.md)
 
-## 6. Experimental design
+## Explore and reproduce
 
-Pretrain once per run×distance on ten bases ×100 noisy copies. Clone into paired schedules with identical state hashes and fresh SGD. A/B/C each have 5000 training examples (750 total updates). Fixed development probes evaluate all three at updates 0,25,…,750. Separate clean/noisy held-out probes, 100 unseen unique bases, and paired D training complete each controlled cell. [Methods](reports/methods.md).
+Download the repository and open [docs/demo/index.html](docs/demo/index.html).
+The self-contained viewer needs no server or frontend install. It separates
+illustrative schedules from actual results; unmeasured conditions stay missing.
+No site or final v2 release is deployed before review.
 
-## 7. Model architecture
+```bash
+cruxrnn run --config configs/v2/main.json --workers 4
+cruxrnn verify --config configs/v2/main.json
+cruxrnn analyze --config configs/v2/main.json
+cruxrnn figures --config configs/v2/main.json
+```
 
-One tanh `torch.nn.RNN`: 7 input / 7 hidden units. Linear readout produces 4 logits; a second linear map feeds raw logits back to 7 inputs. The complete `(batch,1,7)` cue yields `(batch,7,4)` outputs, with hidden reset per example. Eight recurrent calls preserve the final unused source transition. Cross-entropy; SGD .02; zero momentum; batch size 20.
+[Download compact seed-level data](https://raw.githubusercontent.com/ericqin0816/crux-rnn/v2-research-upgrade/results/v2/run_level.csv)
+· [Tables, figures and checksum indexes](results/v2/)
+· [Owner study guide](docs/researcher_guide.md)
+· [Preserved v1 release and raw archive](https://github.com/ericqin0816/crux-rnn/releases/tag/v1.0-final-experiment)
 
-## 8. Sequence-similarity manipulation
+Full v2 checkpoints/arrays are supplied as a local archive with an integrity
+receipt, pending an owner-approved release. They are excluded from Git.
+Measured scientific execution: 1637.45 seconds (27.29 minutes),
+excluding analysis/figure/report preparation. See provenance for exact times.
 
-At k=1,2,4,7 exactly k positions differ, with distinct A/B/C actions at changed positions and identical actions elsewhere. All pairwise Hamming distances must equal k. Labels are 0–3; cues are base+1 with Gaussian SD .1 input noise. Controlled base sets are unique and disjoint. Frequencies/repeated-action patterns are recorded but not matched.
-
-## 9. Blocked versus interleaved conditions
-
-Schedules use the same master noisy examples, targets, starting weights, SGD settings, exposures, and update counts. Blocked presents whole sequence blocks; interleaved permutes identical IDs. The frozen final assignment gives each of the six block orders five repeats per distance. Paired cloned models learn identical D examples/order for 100 updates.
-
-## 10. Repository structure
+## Repository
 
 ```text
-src/motor_rnn/        independent numerical implementation
-tests/               standard-library unittest controls
-scripts/             execution, analysis, plotting, reporting
-configs/             source/smoke/pilot and frozen final configurations
-envs/                exact environment targets and setup evidence
-results/             tracked source/smoke/pilot/final CSVs, figures, manifests
-provenance/          environment, phase/hash indexes, approval gate
-reports/             audit, methods, deviations, review and prior history
-notebooks/           saved-data student walkthrough
-outputs/             ignored full arrays and checkpoints
-external/author_repo/ ignored pinned reference checkout
+src/cruxrnn/          typed v2 models, data, schedules, training, statistics, CLI
+src/motor_rnn/        frozen v1 numerical implementation
+configs/v2/          committed main, pilot and smoke recipes
+results/v2/          actual seed-level results, figures and provenance
+tests/               historical and expanded scientific controls
+docs/                methods, statistics, reproduction and owner guide
+docs/demo/           offline interactive HTML/SVG results explorer
+reports/             separate v1 and v2 research reports
 ```
 
-## 11. Environment setup
+## Limits and acknowledgment
 
-Python 3.8.10; PyTorch 1.13.1 CPU; NumPy 1.24.3; pandas 2.0.3; SciPy 1.10.1; Matplotlib 3.7.2; scikit-learn 1.3.0; joblib 1.4.2. Exact principal versions were achieved here. Conda was unavailable, so a local Windows runtime/pip supplied the same versions. [Deviations](reports/deviations.md); full freeze/system information in `provenance/environment/`.
+The full cue contains its targets. Ordinal labels, unmatched action
+frequencies/repeats, fixed budgets, observed D distances and sign-flip
+assumptions limit generality. Equal-budget architecture comparisons do not
+estimate each architecture's optimized potential. No biological mechanism or
+climbing-performance effect is demonstrated. [Full limitations](docs/limitations.md).
 
-Conda: `conda env create -f envs/reproduction.yml`, activate `motor-rnn-reproduction`, then substitute `python` below. Windows alternative:
-
-```powershell
-./scripts/setup_windows.ps1
-$taskPython = Join-Path (Get-Location) 'envs/tools/python3810/tools/python.exe'
-& $taskPython scripts/system_info.py
-```
-
-## 12. Running tests
-
-```powershell
-& $taskPython -m unittest discover -s tests -v
-```
-
-Final suite: 17 passed, zero failed/skipped: 14 scientific controls plus three approval/provenance checks. [Complete log](reports/unit_tests_confirmatory_final.txt). A public clone without the ignored author checkout skips the audit-only source-model parity test.
-
-## 13. Running reproduction
-
-Commit the code/configuration before a new phase. If needed, clone the reference into the ignored path and checkout the exact commit above.
-
-```powershell
-& $taskPython scripts/run_experiment.py --config configs/source_exact.json --limit 5 --resume
-& $taskPython scripts/compare_source.py --limit 5 --label first_five
-```
-
-The five-run audit and later 100-run main reproduction already exist locally; resume verifies/skips completed cells. A fresh source-only checkout regenerates them. Exact historical author seeds are unavailable. Optional source vulnerability and Figure 2 sensitivity configurations are unexecuted.
-
-## 14. Running smoke test
-
-```powershell
-& $taskPython scripts/run_experiment.py --config configs/smoke.json --resume
-& $taskPython scripts/analyze.py --config configs/smoke.json
-```
-
-One reduced-budget ID exercises all four distances and every pipeline stage, including D, saved outputs, analysis, and figures. Smoke has no scientific interpretation.
-
-## 15. Running pilot
-
-```powershell
-& $taskPython scripts/run_experiment.py --config configs/pilot.json --resume
-& $taskPython scripts/analyze.py --config configs/pilot.json
-& $taskPython scripts/verify_design.py --config configs/pilot.json
-```
-
-Five namespace-separated IDs × four distances yield 20 paired cells / 40 main schedule models. Scientific settings were not changed to favor outcomes. [Raw metrics](results/pilot/raw_metrics.csv), [run-level metrics](results/pilot/run_level.csv), [diagnostic summary](results/pilot/primary_summary.csv), [timings](results/pilot/execution_times.csv).
-
-## 16. Running the final experiment
-
-The user approved the fresh confirmation after pilot review. Frozen config: `configs/final_proposed.json`, SHA-256 `26f8cc56ad115f9e4bb4bb47b30af4997c205cd2906cb8e5195bf24fda8ff006`; namespace `cruxrnn_final_proposed_v1`. Completed 30 IDs at each k=1,2,4,7, with five instances of each blocked order per k. Pre-final Git checkpoint `fa3b7c34496274569944b85c74d2c6c4cd443fe4` was pushed before execution; producing commit `28a2b07bb40afcf7af9b907612e01ce722902bcc` has byte-identical numerical modules. [Approval](provenance/final_approval.json) and [execution records](results/confirmatory/execution_records/) record the relationship.
-
-```powershell
-& $taskPython scripts/run_experiment.py --config configs/final_proposed.json --resume
-& $taskPython scripts/analyze.py --config configs/final_proposed.json
-& $taskPython scripts/verify_design.py --config configs/final_proposed.json
-& $taskPython scripts/publish_confirmatory.py
-& $taskPython scripts/create_walkthrough.py
-```
-
-Start from a clean Git tree; the runner verifies existing complete cells and only continues incomplete work. A fresh checkout regenerates all cells from the frozen seeds. [Prior execution disclosure](reports/prior_execution.md) distinguishes the earlier exploratory study.
-
-## 17. Results
-
-Fresh-noisy final action accuracy, before D; differences/intervals are percentage points:
-
-| k | pairs | Blocked % | IP % | Mean IP−blocked pp | Median pp | SD pp | 95% CI low pp | 95% CI high pp |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 30 | 89.002 | 91.116 | 2.114 | 0.000 | 9.097 | -1.086 | 5.437 |
-| 2 | 30 | 80.221 | 86.651 | 6.430 | 4.357 | 7.930 | 3.878 | 9.418 |
-| 4 | 30 | 61.006 | 76.019 | 15.013 | 14.238 | 9.451 | 11.722 | 18.459 |
-| 7 | 30 | 40.163 | 79.029 | 38.865 | 38.905 | 12.254 | 34.549 | 43.122 |
-
-The intervals include zero at k=1; the direction at these distances remains uncertain. The categorical mean differences increase across the four distances. The prespecified slope is **6.124 pp per Hamming unit**, with a run-ID bootstrap 95% CI **[5.383, 6.853]**.
-
-[Full results](reports/results.md) include clean/complete-sequence/CE/A-B-C/position/generalization/speed/D outcomes. [Every individual pair](results/confirmatory/paired_differences.csv) is retained. Source, smoke, pilot and earlier exploratory data were not pooled. Measured final phase runtime: 381.342 seconds (6.36 minutes); zero failures/exclusions.
-
-## 18. Figures
-
-Five original figures use only the new confirmation: learning curves, final accuracy, paired differences with bootstrap CIs, D forgetting, and shared/differing position errors. All export 300-dpi PNG plus PDF in [results/confirmatory/figures](results/confirmatory/figures/). Clean/noisy panels are separate; k=7 shared positions have NaN/count zero. `scripts/analyze.py` regenerates them. Pilot/smoke figures retain diagnostic labels in their separate directories.
-
-![Confirmatory paired differences and bootstrap CIs](results/confirmatory/figures/paired_differences.png)
-
-## 19. Limitations
-
-The full cue contains the targets, making this numeric decoding rather than unseen-movement prediction or biological consolidation. Fixed architecture/budget, unmatched action frequencies/repeats, and ordinal cues limit generality. Copies/positions are not independent subjects; D similarity is observed. Original exploratory/source/smoke/pilot pre-execution Git/timestamp records are missing; the new confirmation records them contemporaneously. Prior exploratory outcomes were seen, so this run is a disclosed independent confirmation, not a retroactively untouched preregistration.
-
-## 20. Reproducibility
-
-Git/code snapshot → config → named BLAKE2b seeds → data/manifest hashes → checkpoints → metrics → analysis → figures → report. Historical producing Git SHAs were not recorded; later snapshot/reverification commits are honestly labeled in `provenance/stages.json`. Future runs require a clean committed tree and record producing SHA, environment/config fingerprints, UTC times, failures/successes, and artifact hashes. Ignored raw arrays/checkpoints are indexed in `results/*/artifact_index.json`. GitHub is a transparency record, not automatic scientific validation.
-
-The existing local folder remains `proj1`; the project/repository/distribution is CruxRNN / `crux-rnn`. [GitHub delivery](docs/github_setup.md). No Git LFS is required. Full raw confirmation arrays/checkpoints are supplied as `cruxrnn-confirmatory-data.zip` with a SHA-256/CRC record in `artifacts/confirmatory_archive.json`; extract at the release checkout root. The release provides this asset separately from Git history. Historical outputs stay separate.
-
-## 21. Citation / acknowledgments
-
-Cite the original paper and pinned repository above. CruxRNN independently reproduces the specified behavior and adds controlled data/evaluation, without broad novelty claims. Climbing is motivation only. [Professor questions](reports/professor_questions.md) support discussion of interpretation and follow-up work.
+Read [CITATION.cff](CITATION.cff), acknowledge the source paper and
+[pinned source repository](https://github.com/YJ-0000/RNN_during_RP_and_IP),
+and cite the exact version used. The proposed MIT scope covers independently
+authored CruxRNN code/assets; third-party rights remain separate in
+[NOTICE.md](NOTICE.md). Development was AI-assisted and requires independent
+owner review. [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) ·
+[Original v1 overview](README.v1.md).

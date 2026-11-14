@@ -36,3 +36,5 @@ secrets/
 *.egg-info/
 build/
 dist/
+/artifacts/v2_*_proof.png
+/artifacts/v2_*_proof.jpg
