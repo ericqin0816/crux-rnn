@@ -1,0 +1,21 @@
+{
+  "D_adapted_clones": 76,
+  "all_completed_artifact_hashes_valid": true,
+  "completed_cells": 32,
+  "config_sha256": "20759468c31eb986dedb94b19a5b885e44ad8918aeccfd5296b4a5c73e870930",
+  "excluded_cells": 0,
+  "expected_cells": 32,
+  "failure_records": 0,
+  "main_models": 76,
+  "missing_cells": [],
+  "namespace": "cruxrnn_v2_pilot_20261114",
+  "producing_git_commits": [
+    "9c64a499d417d4c3aca0a49648a9fc6c743ddca5"
+  ],
+  "verified_at_utc": "2026-11-14T20:37:00.636849+00:00",
+  "execution_git_commit": "9c64a499d417d4c3aca0a49648a9fc6c743ddca5",
+  "started_at_utc": "2026-11-14T20:35:30.186073+00:00",
+  "finished_at_utc": "2026-11-14T20:36:21.498655+00:00",
+  "wall_seconds": 50.7808493,
+  "role": "software/runtime diagnostics only; excluded from final inference"
+}
