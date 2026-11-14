@@ -1,0 +1,13 @@
+{
+  "D_adapted_clones": 2760,
+  "all_members_crc_verified": true,
+  "archive": "artifacts/cruxrnn-v2-research-data.zip",
+  "bytes": 1281133680,
+  "contains_historical_or_diagnostic_data": false,
+  "main_models": 2760,
+  "members": 18178,
+  "namespace": "cruxrnn_v2_main_20261114",
+  "payload_files_have_internal_sha256": true,
+  "published_release_created": false,
+  "sha256": "6f38dd66d63bc637284452f8290c5cd666b977c4bf632fd92bf90b52e8fac45d"
+}

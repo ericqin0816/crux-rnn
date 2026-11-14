@@ -1,0 +1,11 @@
+{
+  "source_commit": "23ae8b7055f817bfeec1f888f580163c587a11fe",
+  "method": "Fresh remote shallow clone and new isolated Python 3.12 virtual environment",
+  "installation": "pip install -e .[dev] after official CPU torch installation",
+  "v2_tests_passed": 21,
+  "v2_tests_failed": 0,
+  "installed_demo_completed_cells": 16,
+  "installed_demo_main_models": 38,
+  "no_results_pooled": true,
+  "evidence": "Independent modern environment and its outputs retained under outputs/v2/fresh-install-env and outputs/v2/fresh-modern-demo"
+}

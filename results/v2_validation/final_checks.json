@@ -1,0 +1,53 @@
+{
+  "started_at_utc": "2026-11-14T21:29:45.191256+00:00",
+  "finished_at_utc": "2026-11-14T21:29:48.771230+00:00",
+  "git_commit_at_check": "6c44817d4266bb4ad62f7ce556a8fece79900edb",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 38 tests in 0.780s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "All checks passed!"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "format",
+        "--check"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "20 files already formatted"
+      ]
+    }
+  ],
+  "all_passed": true,
+  "recorded_environment_tests": 38
+}

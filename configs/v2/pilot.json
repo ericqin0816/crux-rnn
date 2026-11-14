@@ -1,0 +1,32 @@
+{
+  "namespace": "cruxrnn_v2_pilot_20261114",
+  "output_directory": "outputs/v2/pilot",
+  "repetitions": 2,
+  "distances": [
+    1,
+    7
+  ],
+  "pre_per_sequence": 100,
+  "train_per_sequence": 5000,
+  "eval_per_sequence": 100,
+  "d_examples": 2000,
+  "batch_size": 20,
+  "learning_rate": 0.02,
+  "momentum": 0.0,
+  "noise_sd": 0.1,
+  "eval_every": 25,
+  "d_eval_every": 1,
+  "threshold": 0.9,
+  "threshold_checkpoints": 3,
+  "bootstrap_samples": 10000,
+  "exploratory_repetitions": 2,
+  "noise_levels": [
+    0.0,
+    0.1,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "device": "cpu",
+  "plan": "docs/experiment_plan_v2.md"
+}

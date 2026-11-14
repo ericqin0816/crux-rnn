@@ -1,0 +1,19 @@
+{
+  "plan_committed_before_final_execution": "9c64a49",
+  "unit_tests_passed": 38,
+  "v1_full_budget_parity_main_models": 8,
+  "smoke_cells": 64,
+  "smoke_main_models": 152,
+  "pilot_cells": 32,
+  "pilot_main_models": 76,
+  "pilot_wall_seconds": 50.7808493,
+  "final_main_models_planned": 2760,
+  "final_cells_planned": 1260,
+  "final_configuration_sha256": "cb66c371a2b377273490a3421cd8bff2bf267d3c7e6a590c6d2750b9df621693",
+  "final_namespace": "cruxrnn_v2_main_20261114",
+  "worker_count": 4,
+  "methodology_changed_after_pilot": false,
+  "actual_final_data_directory_absent_before_launch": true,
+  "conservative_pilot_scaled_forecast_seconds": 1844.1466324736841,
+  "recorded_at_utc": "2026-11-14T20:38:13.616368+00:00"
+}

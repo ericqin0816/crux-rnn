@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-11-14T21:30:27.651851+00:00",
+  "figures_visually_reviewed": 12,
+  "figure_formats": [
+    "PNG 300 dpi",
+    "SVG"
+  ],
+  "labels_and_legends_readable": true,
+  "demo_browser_qa": {
+    "primary_rnn_h7_k4_values_match_saved_results": true,
+    "gru_h7_k7_exploratory_values_match_saved_results": true,
+    "unmeasured_gru_h64_k7_explicitly_missing": true,
+    "randomized_schedule_schematic_equal_exposure": true,
+    "browser_error_logs": [],
+    "final_selection": {
+      "architecture": "rnn",
+      "hidden_size": 7,
+      "distance": 4
+    }
+  },
+  "archive_sha256_independently_verified_with": "PowerShell Get-FileHash",
+  "screenshots_are_local_review_artifacts": true
+}

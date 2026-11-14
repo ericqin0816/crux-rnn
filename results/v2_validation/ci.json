@@ -1,0 +1,15 @@
+{
+  "verified_via": "GitHub Actions API",
+  "head_sha": "23ae8b7055f817bfeec1f888f580163c587a11fe",
+  "url": "https://github.com/ericqin0816/crux-rnn/actions/runs/43639874929",
+  "jobs": [
+    {
+      "name": "Install, lint, v2 tests and lightweight demo",
+      "conclusion": "success"
+    },
+    {
+      "name": "Frozen v1 and v2 scientific controls",
+      "conclusion": "success"
+    }
+  ]
+}

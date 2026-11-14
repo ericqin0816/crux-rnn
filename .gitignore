@@ -32,3 +32,9 @@ credentials.json
 secrets/
 /provenance/delivery_status.json
 /artifacts/cruxrnn_final_release.png
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+/artifacts/v2_*_proof.png
+/artifacts/v2_*_proof.jpg

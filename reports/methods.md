@@ -1,6 +1,6 @@
 # CruxRNN: prespecified methods
 
-The numerical design below is retained unchanged. This document accompanies pilot review. Earlier final execution is disclosed in `reports/prior_execution.md`; the proposed independent confirmation is `configs/final_proposed.json` and has not been executed. Historical generating Git commits were not recorded; old results are not attributed to newer code commits.
+The numerical design below is retained unchanged from the v1 pilot-review document. Status correction added during v2: the independent confirmation in `configs/final_proposed.json` subsequently completed 120 pairs / 240 main models and is preserved in the [v1.0 release](https://github.com/ericqin0816/crux-rnn/releases/tag/v1.0-final-experiment). Earlier provenance-incomplete execution is disclosed in [prior_execution.md](prior_execution.md); its results are not attributed to newer code commits. The separate v2 methods and results are in [methodology.md](../docs/methodology.md) and [v2_research_report.md](v2_research_report.md).
 
 This is an independent implementation, a replication, and a focused computational extension of Song, Kim, and Kim (2026), [Scientific Reports](https://doi.org/10.1038/s41598-026-40162-w). It tests practice order and sequence similarity in one small artificial network. It does not test biological memory consolidation or establish effects in human learners. Climbing provides a possible motivation for thinking about movement patterns, not a validation dataset.
 

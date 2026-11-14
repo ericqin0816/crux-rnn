@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">CruxRNN</title>
+  <desc id="desc">An ascending climbing route joins three recurrent network nodes and a returning arrow.</desc>
+  <rect x="3" y="3" width="90" height="90" rx="24" fill="#123e46"/>
+  <path d="M22 74 37 51 49 61 72 25" fill="none" stroke="#f6efe0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 28C16 24 10 49 25 61M70 67c18-1 20-26 6-33" fill="none" stroke="#72c5b1" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="m29 56-4 7-7-4M71 36l6-4 4 7" fill="none" stroke="#72c5b1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#d9773e" stroke="#123e46" stroke-width="3">
+    <circle cx="23" cy="73" r="7"/><circle cx="38" cy="50" r="7"/><circle cx="71" cy="26" r="7"/>
+  </g>
+</svg>

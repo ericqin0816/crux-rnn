@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main, v2-research-upgrade]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-baseline:
+    name: Frozen v1 and v2 scientific controls
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.8.10'
+      - name: Install recorded numerical environment
+        run: |
+          python -m pip install --upgrade pip==25.0.1
+          python -m pip install -r envs/requirements-exact.txt
+          python -m pip install -e ".[dev]"
+      - name: All scientific tests
+        run: python -m unittest discover -s tests -v
+
+  modern-v2:
+    name: Install, lint, v2 tests and lightweight demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install CPU package from a fresh checkout
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e ".[dev]"
+      - name: Lint and format (v2; v1 numerical files deliberately frozen)
+        run: |
+          python -m ruff check
+          python -m ruff format --check
+      - name: Modern v2 controls
+        run: python -m unittest discover -s tests -p 'test_v2*.py' -v
+      - name: Installed CLI demonstration
+        run: cruxrnn demo --output outputs/ci-demo
+      - name: Preserve demo evidence
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: cpu-demo-provenance
+          path: outputs/ci-demo/execution_records/

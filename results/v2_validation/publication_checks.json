@@ -1,0 +1,18 @@
+{
+  "analysis_seed_derived_from_frozen_namespace": 3540032602,
+  "bilingual_primary_tables_equal": true,
+  "distinct_primary_seed_assignments": 12600,
+  "independently_recalculated_mean_median_sd": true,
+  "main_pair_matrix": [
+    100,
+    7
+  ],
+  "missing_local_links": [],
+  "offline_main_values_match_saved_csv": true,
+  "paired_rows": 700,
+  "preserved_v1_files_verified": 285,
+  "primary_seed_collisions": [],
+  "verified_at_utc": "2026-11-14T21:29:49.115989+00:00",
+  "verified_figure_files": 24,
+  "whole_ID_bootstrap_slopes_and_intervals_verified": true
+}
